@@ -12,15 +12,14 @@ At first sight, it may look a bit strange to have the brackets in the middle of 
 
 The main disadvantage is that your key caps will no longer show the correct letters, and the "home position" small bump key will be in the wrong place. But if you are a touch-typist that may not be a concern. Alternatively, you could get some inexpensive stickers or physically switch your keys if supported by your keyboard.
 
-## Qwerty Wide
+## Qwerty Wide (UK)
 
 ![Qwerty Wide Layout](qwerty_wide_uk/qw_w_uk.jpg)
+[Download Qwerty Wide Layout installer](qwerty_wide_uk/qw_w_uk.zip?raw=true)
 
-[Download Qwerty Wide Layout installer](qwerty_wide_uk/qw_w_uk.zip)
-
-## Colemak Wide
+## Colemak Wide (UK)
 
 ![Colemak Wide Layout](colemak_wide_uk/ck_w_uk.jpg)
 
-[Download Colemak Wide Layout installer](colemak_wide_uk/ck_w_uk.zip)
+[Download Colemak Wide Layout installer](colemak_wide_uk/ck_w_uk.zip?raw=true)
 

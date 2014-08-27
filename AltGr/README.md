@@ -8,13 +8,13 @@ Makes available commonly needed programmer characters such as brackets and symbo
 - Hold AltGr then press another key to get the desired character.  AltGr is an ideal key as it can be hit with the right thumb.
 - Most common characters used by programmers are on the home row.
 - Characters on upper letter row are equivalent to a Shift plus a number key, making it earier to remember symbols.
-- Also implements some of the AltGr International Extension (see below) so you can also type many extended and accented characters via dead keys.
+- Also implements some of the AltGr International Extension (see below) so you can also type many extended and accented characters via dead keys (indicated with light blue background).
 
 ![altgr_programmer_std.png](altgr_programmer_std.png)
 
-->UK keyboard shown. Should work fine on other layouts too.<-
+<p align="center">UK keyboard shown. Should work fine on other layouts too.</p>
 
-There is also a Wide verson of this layout sutable for use with the [KLC Wide Layouts](../KLC/)
+There is also a Wide version of this layout suitable for use with the [KLC Wide Layouts](../KLC/)
 
 ## AltGr International extension 
 
