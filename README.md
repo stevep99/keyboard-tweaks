@@ -3,9 +3,16 @@ keyboard-tweaks
 
 Ideas and scripts for optimizing your keyboard.
 
-This project contains mostly [AutoHotkey](http://ahkscript.org/ "AutoHotkey") scripts for making your typing experience more comfortable and efficient.
+This project contains [AutoHotkey](http://ahkscript.org/ "AutoHotkey") scripts and [Microsoft Keyboard Layout Creator](http://msdn.microsoft.com/en-GB/goglobal/bb964665.aspx "Keyboard Layout Creator") (KLC) files for making your typing experience more comfortable and efficient.
 
-To try out any of the scripts, download and install the excellent AutoHotkey and then run the script. Or choose "Edit This Script" from the AutoHotkey menu and paste in the script you want to try.
+## KLC Wide Layouts
+
+[KLC Wide Layouts](KLC/ "KLC Wide Layouts")
+- Adopt a more comfortable typing posture by keeping a greater separation between your hands
+- Easier access to keys on the right-hand side, e.g. Return, Backspace, right shift.
+- Currently availble for UK Qwerty and UK Colemak keyboards.
+
+To try out these layouts, a Windows installer is available in the zip package. Alternatevely, if you have Microsoft Keyboard Layout Creator installed, you can simply load in the KLC source file.
 
 ## AutoHotkey scripts
 
@@ -19,3 +26,4 @@ To try out any of the scripts, download and install the excellent AutoHotkey and
 [Misc scripts](Misc/ "Misc scripts]")
 - Other miscellaneous AutoHotkey scripts: sticky shift, numeric keypad layer.
 
+To try out any of the scripts, install the excellent [AutoHotkey](http://ahkscript.org/ "AutoHotkey") and then run the script. Or choose "Edit This Script" from the AutoHotkey menu and paste in the script you want to try.

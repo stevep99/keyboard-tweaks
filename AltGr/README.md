@@ -1,7 +1,7 @@
 AltGr AutoHotkey scripts
 =========================
 
-# AltGr Progammer extension 
+## AltGr Progammer extension 
 
 Makes available commonly needed programmer characters such as brackets and symbols, available in convenient locations on the keyboard. Avoid awkward stretching for those common keys.
 
@@ -14,7 +14,7 @@ Makes available commonly needed programmer characters such as brackets and symbo
 
 UK keyboard shown. Should work fine on other layouts too.
 
-# AltGr International extension 
+## AltGr International extension 
 
 Makes a variety of accented characters, currency, mathematical and other symbols all available via the AltGr key.
 
