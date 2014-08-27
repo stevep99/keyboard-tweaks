@@ -12,7 +12,9 @@ Makes available commonly needed programmer characters such as brackets and symbo
 
 ![altgr_programmer_std.png](altgr_programmer_std.png)
 
-UK keyboard shown. Should work fine on other layouts too.
+->UK keyboard shown. Should work fine on other layouts too.<-
+
+There is also a Wide verson of this layout sutable for use with the [KLC Wide Layouts](../KLC/)
 
 ## AltGr International extension 
 

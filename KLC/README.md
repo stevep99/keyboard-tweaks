@@ -14,11 +14,13 @@ The main disadvantage is that your key caps will no longer show the correct lett
 
 ## Qwerty Wide
 
-![Qwerty Wide Layout](qw_w_uk.jpg)
-[Download Qwerty Wide Layout installer](qw_w_uk.zip)
+![Qwerty Wide Layout](qwerty_wide_uk/qw_w_uk.jpg)
+
+[Download Qwerty Wide Layout installer](qwerty_wide_uk/qw_w_uk.zip)
 
 ## Colemak Wide
 
-![Colemak Wide Layout](ck_w_uk.jpg)
-[Download Colemak Wide Layout installer](ck_w_uk.zip)
+![Colemak Wide Layout](colemak_wide_uk/ck_w_uk.jpg)
+
+[Download Colemak Wide Layout installer](colemak_wide_uk/ck_w_uk.zip)
 
