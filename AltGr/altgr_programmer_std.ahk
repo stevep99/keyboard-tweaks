@@ -1,5 +1,5 @@
 ﻿; AutoHotKey script for typing characters useful to programmers
-; http://www.keyboard-layout-editor.com/#/layouts/63920c2354800cdb0fdbf79ecaeb9920
+; http://www.keyboard-layout-editor.com/#/layouts/716faf8f505e914d342dbdf817c1f514
 
 RAlt & F1::KeyHistory
 
