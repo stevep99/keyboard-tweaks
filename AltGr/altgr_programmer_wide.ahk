@@ -1,6 +1,6 @@
 ﻿; AutoHotKey script for typing characters useful to programmers 
 ; for use in conjunction with a "wide" layout
-; http://www.keyboard-layout-editor.com/#/layouts/55b96c6f889d2886d6fcad268bc1cbf5
+; http://www.keyboard-layout-editor.com/#/layouts/539046ffec4ab419aaa7c2d34124551d
 
 RAlt & F1::KeyHistory
 

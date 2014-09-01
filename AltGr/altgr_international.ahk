@@ -3,6 +3,9 @@
 ; accented characters and symbols, similar to MS international layout but with 
 ; all additional characters entered via the AltGr key.
 
+; UK layout: http://www.keyboard-layout-editor.com/#/layouts/03f9f4a0d2492d73a76362cdd4fd22c0
+; US layout: http://www.keyboard-layout-editor.com/#/layouts/210278c3558d8477c4ac57e1af82ccf4
+
 RAlt & `::
   GetKeyState, sh, Shift
   if sh = D
