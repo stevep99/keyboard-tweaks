@@ -8,11 +8,11 @@ This project contains [AutoHotkey](http://ahkscript.org/ "AutoHotkey") scripts a
 ## KLC Wide Layouts
 
 [KLC Wide Layouts](KLC/ "KLC Wide Layouts")
-- Adopt a more comfortable typing posture by keeping a greater separation between your hands
-- Easier access to keys on the right-hand side, e.g. Return, Backspace, right shift.
+- Adopt a more comfortable typing posture by keeping a greater separation between your hands.
+- Easier access to keys on the right-hand side, e.g. Return, Backspace, Right Shift.
 - Currently availble for UK Qwerty and UK Colemak keyboards.
 
-To try out these layouts, a Windows installer is available in the zip package. Alternatevely, if you have Microsoft Keyboard Layout Creator installed, you can simply load in the KLC source file.
+To try out these layouts, a Windows installer is available in the zip package. Alternatevely, if you have Microsoft Keyboard Layout Creator installed, you can load in the KLC source file.
 
 ## AutoHotkey scripts
 

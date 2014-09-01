@@ -12,9 +12,11 @@ Makes available commonly needed programmer characters such as brackets and symbo
 
 ![altgr_programmer_std.png](altgr_programmer_std.png)
 
-<p align="center">UK keyboard shown. Should work fine on other layouts too.</p>
+<p align="center">UK keyboard shown. Should work fine on US and other layouts too.</p>
 
 There is also a Wide version of this layout suitable for use with the [KLC Wide Layouts](../KLC/)
+![altgr_programmer_wide.png](altgr_programmer_wide.png)
+<p align="center">Wide layout on a UK keyboard. Should work fine on US and other layouts too.</p>
 
 ## AltGr International extension 
 
@@ -24,10 +26,13 @@ It is largely based on the US International keyboard layout, which allows a wide
 
 Using this script, all standard key presses remain unchanged, and is intended to work on both US and UK keyboards. All the additional characters can be typed with the help of the AltGr key. There are also some dead-key combinations which can be used to type an even wider variety of additional characters, again using the AltGr key.
 
-The key mappings defined by the script are shown in blue and can be produced by holding down the AltGr key. Dead keys are indicated with a blue background.
+The key mappings defined by the script are shown on the right-hand side of the key. Dead keys are indicated with a light blue background.
 
 ![altgr_international_uk.png](altgr_international_uk.png)
+<p align="center">AltGr International extension on a UK keyboard</p>
+
 ![altgr_international_us.png](altgr_international_us.png)
+<p align="center">AltGr International extension on a US keyboard</p>
 
 Examples:
 
