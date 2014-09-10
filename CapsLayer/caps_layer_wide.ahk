@@ -2,7 +2,7 @@
 ; AutoHotKey script for redefining the Caps Lock key as dual-role modifier
 ; Hold Caps Lock and press other keys to provide an additional layer for navigation and other fuctionality
 ; Single press Caps Lock enables a sticky shift - next letter will be capitalized only
-; http://www.keyboard-layout-editor.com/#/layouts/da40aa1b66082f64eb6c5c4b9a11dfe7
+; http://www.keyboard-layout-editor.com/#/layouts/1452abafe9fd9120558536ecc7b8f3c8
   
 #Persistent
 SetCapsLockState, AlwaysOff
@@ -365,9 +365,9 @@ return
 *SC028::
   GetKeyState, cp, CapsLock, P
   if cp = D
-    Send {Blind}{Backspace}
+    Send {Blind}{Del}
   else if navLayer
-    Send {Blind}{Backspace}
+    Send {Blind}{Del}
   else
     Send {Blind}{SC028}
 return
@@ -425,14 +425,23 @@ return
 return
 
 CapsLock & SC030::
-CapsLock & SC031::
-
-CapsLock & SC032::
   GetKeyState, cp, CapsLock, P
   if cp = D
     Send {AppsKey}
   else if navLayer
     Send {AppsKey}
+  else
+    Send {Blind}{SC030}
+return
+
+CapsLock & SC031::
+
+CapsLock & SC032::
+  GetKeyState, cp, CapsLock, P
+  if cp = D
+    Send {Blind}{PgDn}
+  else if navLayer
+    Send {Blind}{PgDn}
   else
     Send {Blind}{SC032}
 return
@@ -447,22 +456,14 @@ return
     Send {Blind}{SC033}
 return
 
-*SC034::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Insert}
-  else if navLayer
-    Send {Insert}
-  else
-    Send {Blind}{SC034}
-return
+CapsLock & SC034::
 
 *SC035::
   GetKeyState, cp, CapsLock, P
   if cp = D
-    Send {CtrlDown}{Backspace}{CtrlUp}
+    Send {Insert}
   else if navLayer
-    Send {CtrlDown}{Backspace}{CtrlUp}
+    Send {Insert}
   else
     Send {Blind}{SC035}
 return
@@ -478,6 +479,8 @@ CapsLock & SC036::
   else
     Send {Blind}{SC056}
 return
+
+CapsLock & SC039::Send {Blind}{Backspace}
 
 ; RAlt cancel caps / nav layer
 
