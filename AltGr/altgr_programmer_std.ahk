@@ -1,65 +1,65 @@
 ﻿; AutoHotKey script for typing characters useful to programmers
-; http://www.keyboard-layout-editor.com/#/layouts/716faf8f505e914d342dbdf817c1f514
+; http://www.keyboard-layout-editor.com/#/layouts/a954a7dde098c8a68893f2e81374aa61
 
 RAlt & F1::KeyHistory
 
 ; number row
 
-RAlt & `::
+RAlt & SC001::
   GetKeyState, sh, Shift
   if sh = D
     Gosub DeadKeyTilde
   else
     Gosub DeadKeyGraveAccent
 return
-RAlt & 1::
+RAlt & SC002::
   GetKeyState, sh, Shift
   if sh = D
     Send ¡
   else
     Send ¹
 return
-RAlt & 2::
+RAlt & SC003::
   GetKeyState, sh, Shift
   if sh = D
-    Gosub, DeadKeyUmlaut
+    Gosub DeadKeyUmlaut
   else
     Send ²
 return
-RAlt & 3::Send ³
-RAlt & 4::
+RAlt & SC004::Send ³
+RAlt & SC005::
   GetKeyState, sh, Shift
   if sh = D
     Send ¤
   else
     Send €
 return
-RAlt & 5::
+RAlt & SC006::
   GetKeyState, sh, Shift
   if sh = D
     Send £
   else
     Send €
 return
-RAlt & 6::
+RAlt & SC007::
   GetKeyState, sh, Shift
   if sh = D
-     Gosub, DeadKeyCircumflex
+     Gosub DeadKeyCircumflex
   else
     Send ¼
 return
-RAlt & 7::Send ½
-RAlt & 8::Send ¾
-RAlt & 9::Send ‘
-RAlt & 0::Send ’
-RAlt & -::
-  GetKeyState, sh, Shift
+RAlt & SC008::Send ½
+RAlt & SC009::Send ¾
+RAlt & SC00A::Send ‘
+RAlt & SC00B::Send ’
+RAlt & SC00C::
+  GetKeyState sh, Shift
   if sh = D
     Send ±
   else
     Send ¥
 return
-RAlt & =::
+RAlt & SC00D::
   GetKeyState, sh, Shift
   if sh = D
     Send ÷
@@ -132,23 +132,23 @@ RAlt & SC01F::
 return
 
 RAlt & SC020::
-  Send {=}
+  Send {{}
 return
 
 RAlt & SC021::
-  Send {+}
+  Send {(}
 return
 
 RAlt & SC022::
-  Send {#}
+  Send {[}
 return
 
 RAlt & SC023::
-  Send {~}
+  Send {]}
 return
 
 RAlt & SC024::
-  Send {{}
+  Send {)}
 return
 
 RAlt & SC025::
@@ -156,22 +156,22 @@ RAlt & SC025::
 return
 
 RAlt & SC026::
-  Send {[}
+  Send {=}
 return
 
 RAlt & SC027::
-  Send {]}
+  Send {+}
 return
 
 RAlt & SC028::
   GetKeyState, sh, Shift
   if sh = D
-    Gosub, DeadKeyUmlaut
+    Gosub DeadKeyUmlaut
   else
-    Gosub, DeadKeyAccent
+    Gosub DeadKeyAccent
 return
 
-RAlt & SC02B:: Gosub, DeadKeyTilde
+RAlt & SC02B:: Gosub DeadKeyTilde
 
 ; lower row
 
@@ -183,12 +183,20 @@ RAlt & SC02C::
     Send æ
 return
 
+RAlt & SC02D::
+  Send {#}
+return
+
 RAlt & SC02E::
   GetKeyState, sh, Shift
   if sh = D
     Send ¢
   else
     Send ©
+return
+
+RAlt & SC02F::
+  Send {~}
 return
 
 RAlt & SC032::
@@ -220,12 +228,12 @@ return
 RAlt & SC056::
   GetKeyState, sh, Shift
   if sh = D 
-    Send {|}
+    Send {?}
   else
-    Send {\}
+    Send {/}
 return
 
-RAlt & Space::Send {Space}
+RAlt & SC039::Send {Space}
 	
 DeadKeyCircumflex:
 Input, TextEntry1, L1,{Esc}{Enter}{F1}{Down}{Up}
