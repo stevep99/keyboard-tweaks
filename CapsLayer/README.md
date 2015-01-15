@@ -7,9 +7,11 @@ This script provides a new layer via the CapsLock key, similar to and inspired b
 - Also defines accessible additional shift and control within the layer to allow easy selection and editing of text.
 - Detects keyboard scancodes so as to work with any keyboard layout (let me know if this is not the case!). Tested with Qwerty and Colemak.
 
+**[Download](caps_layer_std.ahk) a version suitable for Colemak or Qwerty standard layouts:**
 ![caps_layer_std.png](caps_layer_std.png)
 
-There is also a Wide version suitable for use with the [KLC Wide Layouts](../KLC/):
-
+**[Download](caps_layer_wide.ahk) a Wide version suitable for use with the Colemak/Qwerty [Wide Layouts](../KLC/):**
 ![caps_layer_wide.png](caps_layer_wide.png)
 
+**[Download](caps_layer_wide_dh.ahk) a Wide version suitable for the [Colemak Mod-DH](http://colemakmods.github.io/mod-dh/) layout:**
+![caps_layer_wide_dh.png](caps_layer_wide_dh.png)
