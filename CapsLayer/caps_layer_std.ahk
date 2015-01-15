@@ -1,8 +1,8 @@
 ﻿
 ; AutoHotKey script for redefining the Caps Lock key as dual-role modifier
 ; Hold Caps Lock and press other keys to provide an additional layer for navigation and other fuctionality
-; Single press Caps Lock enables a sticky shift - next letter will be capitalized only
-; http://www.keyboard-layout-editor.com/#/layouts/0b120038363383ea1fb6629ae5156d11
+; Single press AltGr enables a sticky shift - next letter will be capitalized only
+; http://www.keyboard-layout-editor.com/#/layouts/c5d16e0ada5cb583a864ff1d516a2277
 
 #Persistent
 SetCapsLockState, AlwaysOff
@@ -13,18 +13,13 @@ global navLayer
   GetKeyState, la, LAlt
   GetKeyState, ra, RAlt
   GetKeyState, ct, Control
-  if sh = D
-  {
-    navLayer := 0
-    SetCapsLockState, AlwaysOff
-  } 
-  else if ra = D
+  if ra = D
   {
     GetKeyState, cp, CapsLock, T
 	if cp = D
 	  SetCapsLockState, AlwaysOff
 	else
-      SetCapsLockState, On  
+      SetCapsLockState, AlwaysOn  
   } 
   else if la = D
   {
@@ -34,22 +29,11 @@ global navLayer
 	  navLayer := 1  
     SetCapsLockState, AlwaysOff
   } 
-  else if ct = D
-  {  
-    navLayer := 0
-    SetCapsLockState, AlwaysOff
-  } 
-  else if navLayer
-  {
-	navLayer := 0
-  }
   else
   {
 ;    Send {Backspace}
     SetCapsLockState, AlwaysOff
-    Send {LShift down}
-    Input key, V M L1 T2, {F1}{F2}{F3}{F4}{F5}{F6}{F7}{F8}{F9}{F10}{F11}{F12}{Left}{Right}{Up}{Down}{Home}{End}{PgUp}{PgDn}{Del}{Ins}{BS}{CapsLock}{PrintScreen}{Pause}{AppsKey}{Alt}
-    Send {LShift up}
+    navLayer := 0
   }
 Return
 
@@ -187,7 +171,7 @@ return
     Send {Blind}{SC010}
 return
 
-CapsLock & SC011::
+*SC011::Send {Blind}{SC011}
 
 *SC012::
   GetKeyState, cp, CapsLock, P
@@ -199,8 +183,8 @@ CapsLock & SC011::
     Send {Blind}{SC012}
 return
 
-CapsLock & SC013::
-CapsLock & SC014::
+*SC013::Send {Blind}{SC013}
+*SC014::Send {Blind}{SC014}
 
 *SC015::
   GetKeyState, cp, CapsLock, P
@@ -252,6 +236,18 @@ return
     Send {Blind}{SC019}
 return
 
+*SC01A::
+  GetKeyState, cp, CapsLock, P
+  if cp = D
+    Send {Insert}
+  else if navLayer
+    Send {Insert}
+  else
+    Send {Blind}{SC01A}
+return
+
+*SC01B::Send {Blind}{SC01B}
+
 ; middle row
 
 *SC01E::
@@ -275,9 +271,9 @@ return
 *SC01F::
   GetKeyState, cp, CapsLock, P
   if cp = D
-    Send {AltDown}{Home}{AltUp}{ShiftDown}{Down}{ShiftUp}
+    Send {Home}{Home}{ShiftDown}{Down}{ShiftUp}
   else if navLayer
-    Send {AltDown}{Home}{AltUp}{ShiftDown}{Down}{ShiftUp}
+    Send {Home}{Home}{ShiftDown}{Down}{ShiftUp}
   else
     Send {Blind}{SC01F}
 return
@@ -318,7 +314,7 @@ return
     Send {CtrlUp}
 return
 
-CapsLock & SC022::
+*SC022::Send {Blind}{SC022}
 
 *SC023::
   GetKeyState, cp, CapsLock, P
@@ -382,6 +378,16 @@ return
 
 ; bottom row
 
+*SC056::
+  GetKeyState, cp, CapsLock, P
+  if cp = D
+    Send {CtrlDown}{y}{CtrlUp}
+  else if navLayer
+    Send {CtrlDown}{y}{CtrlUp}
+  else
+    Send {Blind}{SC056}
+return
+
 *SC02C::
   GetKeyState, cp, CapsLock, P
   if cp = D
@@ -422,7 +428,7 @@ return
     Send {Blind}{SC02F}
 return
 
-CapsLock & SC030::
+*SC030::
   GetKeyState, cp, CapsLock, P
   if cp = D
     Send {AppsKey}
@@ -435,9 +441,9 @@ return
 *SC031::
   GetKeyState, cp, CapsLock, P
   if cp = D
-    Send {Blind}{Down}
+    Send {Blind}{PgDn}
   else if navLayer
-    Send {Blind}{Down}
+    Send {Blind}{PgDn}
   else
     Send {Blind}{SC031}
 return
@@ -445,36 +451,27 @@ return
 *SC032::
   GetKeyState, cp, CapsLock, P
   if cp = D
-    Send {Return}
+    Send {Blind}{Backspace}
   else if navLayer
-    Send {Return}
+    Send {Blind}{Backspace}
   else
     Send {Blind}{SC032}
 return
 
-CapsLock & SC033::
+*SC033::Send {Blind}{SC033}
 
-*SC034::
+*SC034::Send {Blind}{SC034}
+
+*SC035::Send {Blind}{SC035}
+
+*SC039::
   GetKeyState, cp, CapsLock, P
   if cp = D
-    Send {Insert}
+    Send {Return}
   else if navLayer
-    Send {Insert}
+    Send {Return}
   else
-    Send {Blind}{SC034}
-return
-
-CapsLock & SC035::
-CapsLock & SC036::
-
-*SC056::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {CtrlDown}{y}{CtrlUp}
-  else if navLayer
-    Send {CtrlDown}{y}{CtrlUp}
-  else
-    Send {Blind}{SC056}
+    Send {Blind}{Space}
 return
 
 ; RAlt cancel caps / nav layer

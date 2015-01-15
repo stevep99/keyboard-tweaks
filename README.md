@@ -21,7 +21,7 @@ To try out these layouts, a Windows installer is available in the zip package. A
 - AltGr International extension - making a variety of accented characters, currency, mathematical and other symbols all available via the AltGr key.
 
 [CapsLayer scripts](CapsLayer/ "CapsLayer scripts]")
-- Re-use CapsLock for something much more useful. This script provides a navigation layer via holding CapsLock and pressing other keys. Includes arrow keys, home, end, page up/down and more. Actual CapsLock is still available via AltGr+CapsLock.
+- Re-use CapsLock for something much more useful. This script provides a navigation layer via holding CapsLock and pressing other keys. Includes arrow keys, home, end, page up/down and more. The actual CapsLock function is still available via AltGr+CapsLock.
 
 [Misc scripts](Misc/ "Misc scripts]")
 - Other miscellaneous AutoHotkey scripts: sticky shift, numeric keypad layer.
