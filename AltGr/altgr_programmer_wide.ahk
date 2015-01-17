@@ -1,6 +1,6 @@
 ﻿; AutoHotKey script for typing characters useful to programmers 
 ; for use in conjunction with a "wide" layout
-; http://www.keyboard-layout-editor.com/#/layouts/1c3abf207ce0a7b4fe9cf4740c7a2573
+; http://www.keyboard-layout-editor.com/#/layouts/07e3e9d7ca2f2ad36e75d0395e0cef77
 
 RAlt & F1::KeyHistory
 
@@ -176,6 +176,10 @@ return
 
 ; lower row
 
+RAlt & SC056::
+  Send {\}
+return
+
 RAlt & SC02C::
   GetKeyState, sh, Shift
   if sh = D
@@ -185,10 +189,6 @@ RAlt & SC02C::
 return
 
 RAlt & SC02D::
-  Send {#}
-return
-
-RAlt & SC02E::
   GetKeyState, sh, Shift
   if sh = D
     Send ¢
@@ -196,46 +196,51 @@ RAlt & SC02E::
     Send ©
 return
 
-RAlt & SC02F::
-  Send {~}
+RAlt & SC02E::
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {?}
+  else
+    Send {/}
 return
 
-RAlt & SC031::
-  GetKeyState, sh, Shift
-  if sh = D 
-    Send {¿}
-  else
-    Send {\}
+RAlt & SC02F::
+  Send {|}
+return
+
+RAlt & SC030::
+  Send {¿}
 return
 
 RAlt & SC032::
-    Send {?}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {Ç}
+  else
+    Send {ç}
 return
 
 RAlt & SC033::
   GetKeyState, sh, Shift
   if sh = D
-    Send ·
+    Send {µ}
   else
-    Send µ
+    Send {?}
 return
 
 RAlt & SC034::
-  GetKeyState, sh, Shift
   if sh = D
-    Send Ç
+    Send {·}
   else
-    Send ç
+    Send {<}
 return
 
-RAlt & SC035::Send …
-
-RAlt & SC056::
+RAlt & SC035::
   GetKeyState, sh, Shift
-  if sh = D 
-    Send {?}
+  if sh = D
+    Send {…}
   else
-    Send {/}
+    Send {>}
 return
 
 RAlt & SC039::Send {Space}
