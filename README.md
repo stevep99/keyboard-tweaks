@@ -10,9 +10,9 @@ This project contains [AutoHotkey](http://ahkscript.org/ "AutoHotkey") scripts a
 [KLC Wide Layouts](KLC/ "KLC Wide Layouts")
 - Adopt a more comfortable typing posture by keeping a greater separation between your hands.
 - Easier access to keys on the right-hand side, e.g. Return, Backspace, Right Shift.
-- Currently availble for UK Qwerty and UK Colemak keyboards.
+- Currently available for UK Qwerty and UK Colemak keyboards, modifiable for other layouts.
 
-To try out these layouts, a Windows installer is available in the zip package. Alternatevely, if you have Microsoft Keyboard Layout Creator installed, you can load in the KLC source file.
+To try out these layouts, a Windows installer is available in the zip package. Alternatevely, if you have Microsoft Keyboard Layout Creator installed, you can load in the KLC source file and make custom changes.
 
 ## AutoHotkey scripts
 
@@ -20,7 +20,7 @@ To try out these layouts, a Windows installer is available in the zip package. A
 - AltGr Progammer extension - making available commonly needed programmer keys such as brackets and symbols available in convenient locations.
 - AltGr International extension - making a variety of accented characters, currency, mathematical and other symbols all available via the AltGr key.
 
-[CapsLayer scripts](CapsLayer/ "CapsLayer scripts]")
+[CapsLock Extend scripts](CapsLayer/ "CapsLock Extend scripts]")
 - Re-use CapsLock for something much more useful. This script provides a navigation layer via holding CapsLock and pressing other keys. Includes arrow keys, home, end, page up/down and more. The actual CapsLock function is still available via AltGr+CapsLock.
 
 [Misc scripts](Misc/ "Misc scripts]")
