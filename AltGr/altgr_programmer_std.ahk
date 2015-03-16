@@ -1,5 +1,5 @@
 ﻿; AutoHotKey script for typing characters useful to programmers
-; http://www.keyboard-layout-editor.com/#/layouts/427c99e89aacd59f607b7e5af9f71ef0
+; http://www.keyboard-layout-editor.com/#/layouts/db07d4c5d926a612aa56e51fb3ee6baf
 
 RAlt & F1::KeyHistory
 
@@ -12,6 +12,7 @@ RAlt & SC001::
   else
     Gosub DeadKeyGraveAccent
 return
+
 RAlt & SC002::
   GetKeyState, sh, Shift
   if sh = D
@@ -19,6 +20,7 @@ RAlt & SC002::
   else
     Send ¹
 return
+
 RAlt & SC003::
   GetKeyState, sh, Shift
   if sh = D
@@ -26,7 +28,9 @@ RAlt & SC003::
   else
     Send ²
 return
+
 RAlt & SC004::Send ³
+
 RAlt & SC005::
   GetKeyState, sh, Shift
   if sh = D
@@ -34,6 +38,7 @@ RAlt & SC005::
   else
     Send €
 return
+
 RAlt & SC006::
   GetKeyState, sh, Shift
   if sh = D
@@ -41,24 +46,55 @@ RAlt & SC006::
   else
     Send €
 return
+
 RAlt & SC007::
   GetKeyState, sh, Shift
   if sh = D
-     Gosub DeadKeyCircumflex
-  else
     Send ¼
+  else
+     Gosub DeadKeyCircumflex
 return
-RAlt & SC008::Send ½
-RAlt & SC009::Send ¾
-RAlt & SC00A::Send ‘
-RAlt & SC00B::Send ’
+
+RAlt & SC008::
+  GetKeyState, sh, Shift
+  if sh = D
+	Send ½
+  else
+    Send 7
+return
+
+RAlt & SC009::
+  GetKeyState, sh, Shift
+  if sh = D
+	Send ¾
+  else
+    Send 8
+return
+
+RAlt & SC00A::
+  GetKeyState, sh, Shift
+  if sh = D
+	Send ‘
+  else
+    Send 9
+return
+
+RAlt & SC00B::
+  GetKeyState, sh, Shift
+  if sh = D
+	Send ’
+  else
+    Send 0
+return
+
 RAlt & SC00C::
-  GetKeyState sh, Shift
+  GetKeyState, sh, Shift
   if sh = D
     Send ±
   else
     Send ¥
 return
+
 RAlt & SC00D::
   GetKeyState, sh, Shift
   if sh = D
@@ -70,43 +106,43 @@ return
 ; upper row
 
 RAlt & SC010::
-  Send {ShiftDown}{1}{ShiftUp}
+  Send {!}
 return
 
 RAlt & SC011::
-  Send {ShiftDown}{2}{ShiftUp}
+  Send {{}
 return
 
 RAlt & SC012::
-  Send {ShiftDown}{3}{ShiftUp}
+  Send {}}
 return
 
 RAlt & SC013::
-  Send {ShiftDown}{4}{ShiftUp}
+  Send {$}
 return
 
 RAlt & SC014::
-  Send {ShiftDown}{5}{ShiftUp}
+  Send {`%}
 return
 
 RAlt & SC015::
-  Send {ShiftDown}{6}{ShiftUp}
+  Send {^}
 return
 
 RAlt & SC016::
-  Send {ShiftDown}{7}{ShiftUp}
+  Send {4}
 return
 
 RAlt & SC017::
-  Send {ShiftDown}{8}{ShiftUp}
+  Send {5}
 return
 
 RAlt & SC018::
-  Send {ShiftDown}{9}{ShiftUp}
+  Send {6}
 return
 
 RAlt & SC019::
-  Send {ShiftDown}{0}{ShiftUp}
+  Send {+}
 return
 
 RAlt & SC01A::
@@ -120,7 +156,7 @@ return
 ; middle row
 
 RAlt & SC01E::
-  Send {-}
+  Send {_}
 return
 
 RAlt & SC01F::
@@ -128,50 +164,54 @@ RAlt & SC01F::
   if sh = D
     Send {®}
   else
-    Send {_}
+    Send {(}
 return
 
 RAlt & SC020::
-  Send {{}
-return
-
-RAlt & SC021::
-  Send {(}
-return
-
-RAlt & SC022::
-  Send {[}
-return
-
-RAlt & SC023::
-  Send {]}
-return
-
-RAlt & SC024::
   Send {)}
 return
 
+RAlt & SC021::
+  Send {"}
+return
+
+RAlt & SC022::
+  Send {£}
+return
+
+RAlt & SC023::
+  Send {&}
+return
+
+RAlt & SC024::
+  Send {1}
+return
+
 RAlt & SC025::
-  Send {}}
+  Send {2}
 return
 
 RAlt & SC026::
-  Send {=}
+  Send {3}
 return
 
 RAlt & SC027::
-  Send {+}
+  Send {-}
 return
 
 RAlt & SC028::
   GetKeyState, sh, Shift
   if sh = D
-    Gosub DeadKeyUmlaut
-  else
+    ; Gosub DeadKeyUmlaut
     Gosub DeadKeyAccent
+  else
+    ; Gosub DeadKeyAccent
+	Send {=}
 return
 
-RAlt & SC02B:: Gosub DeadKeyTilde
+RAlt & SC02B::
+  Gosub DeadKeyTilde
+return
 
 ; lower row
 
@@ -182,41 +222,37 @@ return
 RAlt & SC02C::
   GetKeyState, sh, Shift
   if sh = D
-    Send Æ
+    Send {¢}
   else
-    Send æ
+    Send {[}
 return
 
 RAlt & SC02D::
-  Send {~}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {©}
+  else
+    Send {]}
 return
 
 RAlt & SC02E::
   GetKeyState, sh, Shift
   if sh = D
-    Send ¢
-  else
-    Send ©
-return
-
-RAlt & SC02F::
-  GetKeyState, sh, Shift
-  if sh = D
-    Send {|}
+    Send {?}
   else
     Send {/}
 return
 
+RAlt & SC02F::
+    Send {|}
+return
+
 RAlt & SC030::
-  Send {~}
+  Send {¿}
 return
 
 RAlt & SC031::
-  GetKeyState, sh, Shift
-  if sh = D
-    Send {Ç}
-  else
-    Send {ç}
+  Send {*}
 return
 
 RAlt & SC032::
@@ -228,10 +264,11 @@ RAlt & SC032::
 return
 
 RAlt & SC033::
+  GetKeyState, sh, Shift
   if sh = D
     Send {·}
   else
-    Send {<}
+    Send {0}
 return
 
 RAlt & SC034::
@@ -239,15 +276,11 @@ RAlt & SC034::
   if sh = D
     Send {…}
   else
-    Send {>}
+    Send {.}
 return
 
 RAlt & SC035::
-  GetKeyState, sh, Shift
-  if sh = D
-    Send {¿}
-  else
-    Send {\}
+  Send {\}
 return
 
 RAlt & SC039::Send {Space}
@@ -463,3 +496,4 @@ else if entry = u
     Send ù
 }
 return
+

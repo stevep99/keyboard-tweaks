@@ -3,11 +3,11 @@ AltGr AutoHotkey scripts
 
 ## AltGr Progammer extension 
 
-Makes available commonly needed programmer characters such as brackets and symbols, available in convenient locations on the keyboard. Avoid awkward stretching for those common keys.
+Makes available commonly needed programmer characters such as brackets and symbols, available in convenient locations on the keyboard. Avoid awkward stretching for those common keys. Also adds a virtual numeric keybad to right hand. 
 
 - Hold AltGr then press another key to get the desired character.  AltGr is an ideal key as it can be hit with the right thumb.
-- Most common characters used by programmers are on the home row.
-- Characters on upper letter row are equivalent to a Shift plus a number key, making it earier to remember symbols.
+- Many common characters used by programmers such as brackets are on the home row or other easy to reach keys.
+- Numeric keypad allows quick entering of numbers without leaving the home position.
 - Also implements some of the AltGr International Extension (see below) so you can also type many extended and accented characters via dead keys (indicated with light blue background).
 
 ![altgr_programmer_std.png](altgr_programmer_std.png)
