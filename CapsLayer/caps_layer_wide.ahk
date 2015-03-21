@@ -1,16 +1,18 @@
 ﻿
-; AutoHotKey script for redefining the Caps Lock key as dual-role modifier
-; Hold Caps Lock and press other keys to provide an additional layer for navigation and other fuctionality
-; Single press AltGr enables a sticky shift - next letter will be capitalized only
+; AutoHotKey script for defining an Extend layer (default is CapsLock)
+; Hold Extend and press other keys to provide navigation and other fuctionality
 ; http://www.keyboard-layout-editor.com/#/layouts/0e9b9a41ddd3bbe0846967a59c782ba2
+; The script defines F22 as Extend, so you can apply to any key of your choice
+; e.g. 
+; #InputLevel 1
+; CapsLock::F22
+; #InputLevel 0
   
 #Persistent
 SetCapsLockState, AlwaysOff
-global navLayer
 
-*CapsLock::
+*F22::
   GetKeyState, sh, Shift
-  GetKeyState, la, LAlt
   GetKeyState, ra, RAlt
   GetKeyState, ct, Control
   if ra = D
@@ -21,458 +23,215 @@ global navLayer
 	else
       SetCapsLockState, AlwaysOn  
   } 
-  else if la = D
+  else if sh = D
   {
-	if navLayer
-	  navLayer := 0
+    GetKeyState, cp, CapsLock, T
+	if cp = D
+	  SetCapsLockState, AlwaysOff
 	else
-	  navLayer := 1  
-    SetCapsLockState, AlwaysOff
-  } 
+      SetCapsLockState, AlwaysOn  
+  }
   else
   {
-;    Send {Backspace}
+    ;Send {Backspace}
     SetCapsLockState, AlwaysOff
-    navLayer := 0
   }
 Return
 
 ; digit row
 
-*SC002::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{F1}
-  else if navLayer
-    Send {Blind}{F1}
-  else
-    Send {Blind}{SC002}
+F22 & SC001::
+
+F22 & SC002::
+  Send {Blind}{F1}
 return
 
-*SC003::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{F2}
-  else if navLayer
-    Send {Blind}{F2}
-  else
-    Send {Blind}{SC003}
+F22 & SC003::
+  Send {Blind}{F2}
 return
 
-*SC004::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{F3}
-  else if navLayer
-    Send {Blind}{F3}
-  else
-    Send {Blind}{SC004}
+F22 & SC004::
+  Send {Blind}{F3}
 return
 
-*SC005::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{F4}
-  else if navLayer
-    Send {Blind}{F4}
-  else
-    Send {Blind}{SC005}
+F22 & SC005::
+  Send {Blind}{F4}
 return
 
-*SC006::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{F5}
-  else if navLayer
-    Send {Blind}{F5}
-  else
-    Send {Blind}{SC006}
+F22 & SC006::
+  Send {Blind}{F5}
 return
 
-*SC008::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{F6}
-  else if navLayer
-    Send {Blind}{F6}
-  else
-    Send {Blind}{SC008}
+F22 & SC008::
+  Send {Blind}{F6}
 return
 
-*SC009::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{F7}
-  else if navLayer
-    Send {Blind}{F7}
-  else
-    Send {Blind}{SC009}
+F22 & SC009::
+  Send {Blind}{F7}
 return
 
-*SC00A::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{F8}
-  else if navLayer
-    Send {Blind}{F8}
-  else
-    Send {Blind}{SC00A}
+F22 & SC00A::
+  Send {Blind}{F8}
 return
 
-*SC00B::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{F9}
-  else if navLayer
-    Send {Blind}{F9}
-  else
-    Send {Blind}{SC00B}
+F22 & SC00B::
+  Send {Blind}{F9}
 return
 
-*SC00C::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{F10}
-  else if navLayer
-    Send {Blind}{F10}
-  else
-    Send {Blind}{SC00C}
+F22 & SC00C::
+  Send {Blind}{F10}
 return
 
-*SC00D::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{F11}
-  else if navLayer
-    Send {Blind}{F11}
-  else
-    Send {Blind}{SC00D}
+F22 & SC00D::
+  Send {Blind}{F11}
 return
 
-*SC007::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{F12}
-  else if navLayer
-    Send {Blind}{F12}
-  else
-    Send {Blind}{SC007}
+F22 & SC007::
+  Send {Blind}{F12}
 return
 
 ; top row
 
-*SC010::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Esc}
-  else if navLayer
-    Send {Esc}
-  else
-    Send {Blind}{SC010}
+F22 & SC010::
+  Send {Esc}
 return
 
-*SC011::Send {Blind}{SC011}
+F22 & SC011::
 
-*SC012::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {CtrlDown}{f}{CtrlUp}
-  else if navLayer
-    Send {CtrlDown}{f}{CtrlUp}
-  else
-    Send {Blind}{SC012}
+F22 & SC012::
+  Send {CtrlDown}{f}{CtrlUp}
 return
 
-*SC013::Send {Blind}{SC013}
-*SC014::Send {Blind}{SC014}
-*SC015::Send {Blind}{SC015}
+F22 & SC013::
 
-*SC016::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{PgUp}
-  else if navLayer
-    Send {Blind}{PgUp}
-  else
-    Send {Blind}{SC016}
+F22 & SC014::
+
+F22 & SC015::
+
+F22 & SC016::
+  Send {Blind}{PgUp}
 return
 
-*SC017::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{Home}
-  else if navLayer
-    Send {Blind}{Home}
-  else
-    Send {Blind}{SC017}
+F22 & SC017::
+  Send {Blind}{Home}
 return
 
-*SC018::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{Up}
-  else if navLayer
-    Send {Blind}{Up}
-  else
-    Send {Blind}{SC018}
+F22 & SC018::
+  Send {Blind}{Up}
 return
 
-*SC019::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{End}
-  else if navLayer
-    Send {Blind}{End}
-  else
-    Send {Blind}{SC019}
+F22 & SC019::
+  Send {Blind}{End}
 return
 
-*SC01A::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{End}{;}
-  else if navLayer
-    Send {Blind}{End}{;}
-  else
-    Send {Blind}{SC01A}
+F22 & SC01A::
+  Send {Blind}{End}{;}
 return
 
-*SC01B::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Insert}
-  else if navLayer
-    Send {Insert}
-  else
-    Send {Blind}{SC01B}
+F22 & SC01B::
+  Send {Insert}
 return
 
 ; middle row
 
-*SC01E::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{AltDown}
-  else if navLayer
-    Send {Blind}{AltDown}
-  else
-    Send {Blind}{SC01E}
+F22 & SC01E::
+  Send {Blind}{AltDown}
 return
 
-*SC01E Up::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {AltUp}
-  else if navLayer
-    Send {AltUp}
+F22 & SC01E Up::
+  Send {AltUp}
 return
 
-*SC01F::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Home}{Home}{ShiftDown}{Down}{ShiftUp}
-  else if navLayer
-    Send {Home}{Home}{ShiftDown}{Down}{ShiftUp}
-  else
-    Send {Blind}{SC01F}
+F22 & SC01F::
+  Send {Home}{Home}{ShiftDown}{Down}{ShiftUp}
 return
 
-*SC020::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{ShiftDown}
-  else if navLayer
-    Send {Blind}{ShiftDown}
-  else
-    Send {Blind}{SC020}
+F22 & SC020::
+  Send {Blind}{ShiftDown}
 return
 
-*SC020 Up::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {ShiftUp}
-  else if navLayer
-    Send {ShiftUp}
+F22 & SC020 Up::
+  Send {ShiftUp}
 return
 
-*SC021::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{CtrlDown}
-  else if navLayer
-    Send {Blind}{CtrlDown}
-  else
-    Send {Blind}{SC021}
+F22 & SC021::
+  Send {Blind}{CtrlDown}
 return
 
-*SC021 Up::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {CtrlUp}
-  else if navLayer
-    Send {CtrlUp}
+F22 & SC021 Up::
+  Send {CtrlUp}
 return
 
-*SC022::Send {Blind}{SC022}
+F22 & SC022::
 
-*SC023::Send {Blind}{SC023}
+F22 & SC023::
 
-*SC024::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{PgDn}
-  else if navLayer
-    Send {Blind}{PgDn}
-  else
-    Send {Blind}{SC024}
+F22 & SC024::
+  Send {Blind}{PgDn}
 return
 
-*SC025::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{Left}
-  else if navLayer
-    Send {Blind}{Left}
-  else
-    Send {Blind}{SC025}
+F22 & SC025::
+  Send {Blind}{Left}
 return
 
-*SC026::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{Down}
-  else if navLayer
-    Send {Blind}{Down}
-  else
-    Send {Blind}{SC026}
+F22 & SC026::
+  Send {Blind}{Down}
 return
 
-*SC027::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{Right}
-  else if navLayer
-    Send {Blind}{Right}
-  else
-    Send {Blind}{SC027}
+F22 & SC027::
+  Send {Blind}{Right}
 return
 
-*SC028::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{Del}
-  else if navLayer
-    Send {Blind}{Del}
-  else
-    Send {Blind}{SC028}
+F22 & SC028::
+  Send {Blind}{Del}
 return
 
-*SC02B::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{Del}
-  else if navLayer
-    Send {Blind}{Del}
-  else
-    Send {Blind}{SC02B}
+F22 & SC02B::
+  Send {Blind}{Del}
 return
 
 ; bottom row
 
-*SC056::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {CtrlDown}{y}{CtrlUp}
-  else if navLayer
-    Send {CtrlDown}{y}{CtrlUp}
-  else
-    Send {Blind}{SC056}
+F22 & SC056::
+  Send {CtrlDown}{y}{CtrlUp}
 return
 
-*SC02C::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {CtrlDown}{z}{CtrlUp}
-  else if navLayer
-    Send {CtrlDown}{z}{CtrlUp}
-  else
-    Send {Blind}{SC02C}
+F22 & SC02C::
+  Send {CtrlDown}{z}{CtrlUp}
 return
 
-*SC02D::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {CtrlDown}{x}{CtrlUp}
-  else if navLayer
-    Send {CtrlDown}{x}{CtrlUp}
-  else
-    Send {Blind}{SC02D}
+F22 & SC02D::
+  Send {CtrlDown}{x}{CtrlUp}
 return
 
-*SC02E::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {CtrlDown}{c}{CtrlUp}
-  else if navLayer
-    Send {CtrlDown}{c}{CtrlUp}
-  else
-    Send {Blind}{SC02E}
+F22 & SC02E::
+  Send {CtrlDown}{c}{CtrlUp}
 return
 
-*SC02F::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {CtrlDown}{v}{CtrlUp}
-  else if navLayer
-    Send {CtrlDown}{v}{CtrlUp}
-  else
-    Send {Blind}{SC02F}
+F22 & SC02F::
+  Send {CtrlDown}{v}{CtrlUp}
 return
 
-*SC030::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {AppsKey}
-  else if navLayer
-    Send {AppsKey}
-  else
-    Send {Blind}{SC030}
+F22 & SC030::
+  Send {AppsKey}
 return
 
-*SC031::Send {Blind}{SC031}
+F22 & SC031::
 
-*SC032::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{PgDn}
-  else if navLayer
-    Send {Blind}{PgDn}
-  else
-    Send {Blind}{SC032}
+F22 & SC032::
+  Send {Blind}{PgDn}
 return
 
-*SC033::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Blind}{Backspace}
-  else if navLayer
-    Send {Blind}{Backspace}
-  else
-    Send {Blind}{SC033}
+F22 & SC033::
+  Send {Blind}{Backspace}
 return
 
-*SC034::Send {Blind}{SC034}
+F22 & SC034::
 
-*SC035::Send {Blind}{SC035}
+F22 & SC035::
 
-*SC039::
-  GetKeyState, cp, CapsLock, P
-  if cp = D
-    Send {Return}
-  else if navLayer
-    Send {Return}
-  else
-    Send {Blind}{Space}
+F22 & SC039::
+  Send {Return}
 return
 
 ; RAlt cancel caps / nav layer
@@ -488,3 +247,4 @@ RAlt::
     SetCapsLockState, AlwaysOff
   } 
 Return
+

@@ -1,12 +1,18 @@
-﻿; AutoHotKey script for typing characters useful to programmers 
+﻿; AutoHotKey script for providing additional layer of characters useful to programmers (default is AltGr)
 ; for use in conjunction with a "wide" layout
 ; http://www.keyboard-layout-editor.com/#/layouts/b8a1a2240bba6ba0f6e96b656e7f75e5
+; The script defines F20 as the extra layer key, so you can apply to any key of your choice
+; e.g. 
+; #InputLevel 1
+; RAlt::F20
+; #InputLevel 0
 
-RAlt & F1::KeyHistory
+
+F20 & F1::KeyHistory
 
 ; number row
 
-RAlt & SC001::
+F20 & SC001::
   GetKeyState, sh, Shift
   if sh = D
     Gosub DeadKeyTilde
@@ -14,7 +20,7 @@ RAlt & SC001::
     Gosub DeadKeyGraveAccent
 return
 
-RAlt & SC002::
+F20 & SC002::
   GetKeyState, sh, Shift
   if sh = D
     Send ¡
@@ -22,7 +28,7 @@ RAlt & SC002::
     Send ¹
 return
 
-RAlt & SC003::
+F20 & SC003::
   GetKeyState, sh, Shift
   if sh = D
     Gosub DeadKeyUmlaut
@@ -30,9 +36,9 @@ RAlt & SC003::
     Send ²
 return
 
-RAlt & SC004::Send ³
+F20 & SC004::Send ³
 
-RAlt & SC005::
+F20 & SC005::
   GetKeyState, sh, Shift
   if sh = D
     Send ¤
@@ -40,7 +46,7 @@ RAlt & SC005::
     Send €
 return
 
-RAlt & SC006::
+F20 & SC006::
   GetKeyState, sh, Shift
   if sh = D
     Send £
@@ -48,7 +54,7 @@ RAlt & SC006::
     Send €
 return
 
-RAlt & SC008::
+F20 & SC008::
   GetKeyState, sh, Shift
   if sh = D
     Send ¼
@@ -56,7 +62,7 @@ RAlt & SC008::
      Gosub DeadKeyCircumflex
 return
 
-RAlt & SC009::
+F20 & SC009::
   GetKeyState, sh, Shift
   if sh = D
 	Send ½
@@ -64,7 +70,7 @@ RAlt & SC009::
     Send 7
 return
 
-RAlt & SC00A::
+F20 & SC00A::
   GetKeyState, sh, Shift
   if sh = D
 	Send ¾
@@ -72,7 +78,7 @@ RAlt & SC00A::
     Send 8
 return
 
-RAlt & SC00B::
+F20 & SC00B::
   GetKeyState, sh, Shift
   if sh = D
 	Send ‘
@@ -80,7 +86,7 @@ RAlt & SC00B::
     Send 9
 return
 
-RAlt & SC00C::
+F20 & SC00C::
   GetKeyState, sh, Shift
   if sh = D
 	Send ’
@@ -88,7 +94,7 @@ RAlt & SC00C::
     Send 0
 return
 
-RAlt & SC00D::
+F20 & SC00D::
   GetKeyState, sh, Shift
   if sh = D
     Send ±
@@ -96,7 +102,7 @@ RAlt & SC00D::
     Send ¥
 return
 
-RAlt & SC007::
+F20 & SC007::
   GetKeyState, sh, Shift
   if sh = D
     Send ÷
@@ -106,61 +112,61 @@ return
 
 ; upper row
 
-RAlt & SC010::
+F20 & SC010::
   Send {!}
 return
 
-RAlt & SC011::
+F20 & SC011::
   Send {{}
 return
 
-RAlt & SC012::
+F20 & SC012::
   Send {}}
 return
 
-RAlt & SC013::
+F20 & SC013::
   Send {$}
 return
 
-RAlt & SC014::
+F20 & SC014::
   Send {`%}
 return
 
-RAlt & SC016::
+F20 & SC016::
   Send {^}
 return
 
-RAlt & SC017::
+F20 & SC017::
   Send {4}
 return
 
-RAlt & SC018::
+F20 & SC018::
   Send {5}
 return
 
-RAlt & SC019::
+F20 & SC019::
   Send {6}
 return
 
-RAlt & SC01A::
+F20 & SC01A::
   Send {+}
 return
 
-RAlt & SC01B:: 
+F20 & SC01B:: 
   Gosub DeadKeyTilde
 return
 
-RAlt & SC015::
+F20 & SC015::
   Send {«}
 return
 
 ; middle row
 
-RAlt & SC01E::
+F20 & SC01E::
   Send {_}
 return
 
-RAlt & SC01F::
+F20 & SC01F::
   GetKeyState, sh, Shift
   if sh = D
     Send {®}
@@ -168,39 +174,39 @@ RAlt & SC01F::
     Send {(}
 return
 
-RAlt & SC020::
+F20 & SC020::
   Send {)}
 return
 
-RAlt & SC021::
+F20 & SC021::
   Send {"}
 return
 
-RAlt & SC022::
+F20 & SC022::
   Send {£}
 return
 
-RAlt & SC024::
+F20 & SC024::
   Send {&}
 return
 
-RAlt & SC025::
+F20 & SC025::
   Send {1}
 return
 
-RAlt & SC026::
+F20 & SC026::
   Send {2}
 return
 
-RAlt & SC027::
+F20 & SC027::
   Send {3}
 return
 
-RAlt & SC028::
+F20 & SC028::
   Send {-}
 return
 
-RAlt & SC02B::
+F20 & SC02B::
   GetKeyState, sh, Shift
   if sh = D
     ; Gosub DeadKeyUmlaut
@@ -210,17 +216,17 @@ RAlt & SC02B::
 	Send {=}
 return
 
-RAlt & SC023::
+F20 & SC023::
   Send {»}
 return
 
 ; lower row
 
-RAlt & SC056::
+F20 & SC056::
   Send {\}
 return
 
-RAlt & SC02C::
+F20 & SC02C::
   GetKeyState, sh, Shift
   if sh = D
     Send {¢}
@@ -228,7 +234,7 @@ RAlt & SC02C::
     Send {[}
 return
 
-RAlt & SC02D::
+F20 & SC02D::
   GetKeyState, sh, Shift
   if sh = D
     Send {©}
@@ -236,7 +242,7 @@ RAlt & SC02D::
     Send {]}
 return
 
-RAlt & SC02E::
+F20 & SC02E::
   GetKeyState, sh, Shift
   if sh = D
     Send {?}
@@ -244,19 +250,19 @@ RAlt & SC02E::
     Send {/}
 return
 
-RAlt & SC02F::
+F20 & SC02F::
   Send {|}
 return
 
-RAlt & SC030::
+F20 & SC030::
   Send {¿}
 return
 
-RAlt & SC032::
+F20 & SC032::
   Send {*}
 return
 
-RAlt & SC033::
+F20 & SC033::
   GetKeyState, sh, Shift
   if sh = D
     Send {µ}
@@ -264,7 +270,7 @@ RAlt & SC033::
     Send {?}
 return
 
-RAlt & SC034::
+F20 & SC034::
   GetKeyState, sh, Shift
   if sh = D
     Send {·}
@@ -272,7 +278,7 @@ RAlt & SC034::
     Send {0}
 return
 
-RAlt & SC035::
+F20 & SC035::
   GetKeyState, sh, Shift
   if sh = D
     Send {…}
@@ -280,7 +286,7 @@ RAlt & SC035::
     Send {.}
 return
 
-RAlt & SC039::Send {Space}
+F20 & SC039::Send {Space}
 
 DeadKeyCircumflex:
 Input, TextEntry1, L1,{Esc}{Enter}{F1}{Down}{Up}
@@ -493,4 +499,3 @@ else if entry = u
     Send ù
 }
 return
-
