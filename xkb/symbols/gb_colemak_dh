@@ -1,64 +1,65 @@
+default
 partial alphanumeric_keys
 xkb_symbols "stevep" {
 
     //  Alphanumeric section (letter keys and semicolon)
     key <AD01> { [             q,             Q,              exclam,          exclamdown ] }; // QWE/Cmk Q
-    key <AD02> { [             w,             W,           braceleft, leftdoublequotemark ] }; // QWE/Cmk W
-    key <AD03> { [             f,             F,          braceright,rightdoublequotemark ] }; // QWE E Cmk F
+    key <AD02> { [             w,             W,            quotedbl,             uparrow ] }; // QWE/Cmk W
+    key <AD03> { [             f,             F,            sterling,            ellipsis ] }; // QWE E Cmk F
     key <AD04> { [             p,             P,              dollar,            Greek_pi ] }; // QWE R Cmk P
     key <AD05> { [             b,             B,             percent,          Greek_beta ] }; // QWE T Cmk G
     key <AD06> { [             j,             J,         asciicircum,               U01A9 ] }; // QWE Y Cmk J
-    key <AD07> { [             l,             L,                   4,             Lstroke ] }; // QWE U Cmk L
-    key <AD08> { [             u,             U,                   5,       guillemotleft ] }; // QWE I Cmk U
-    key <AD09> { [             y,             Y,                   6,      guillemotright ] }; // QWE O Cmk Y
-    key <AD10> { [     semicolon,         colon,                plus,            ellipsis ] }; // QWE P Cmk ;:
+    key <AD07> { [             l,             L,           ampersand,                   4 ] }; // QWE U Cmk L
+    key <AD08> { [             u,             U,            asterisk,                   5 ] }; // QWE I Cmk U
+    key <AD09> { [             y,             Y, leftdoublequotemark,                   6 ] }; // QWE O Cmk Y
+    key <AD10> { [     semicolon,         colon,rightdoublequotemark,                sdot ] }; // QWE P Cmk ;:
     //  U2039/203A single guillemets; U0283/01A9 esh/ESH
-    key <AC01> { [             a,             A,          underscore,                  AE ] }; // QWE/Cmk A
-    key <AC02> { [             r,             R,           parenleft,          registered ] }; // QWE S Cmk R
-    key <AC03> { [             s,             S,          parenright,           trademark ] }; // QWE D Cmk S
-    key <AC04> { [             t,             T,            quotedbl,               THORN ] }; // QWE F Cmk T
-    key <AC05> { [             g,             G,            sterling,                 ENG ] }; // QWE G Cmk D
-    key <AC06> { [             m,             M,           ampersand,           leftarrow ] }; // QWE/Cmk H
-    key <AC07> { [             n,             N,                   1,           leftarrow ] }; // QWE J Cmk N
-    key <AC08> { [             e,             E,                   2,             uparrow ] }; // QWE K Cmk E
-    key <AC09> { [             i,             I,                   3,          rightarrow ] }; // QWE L Cmk I
+    key <AC01> { [             a,             A,          underscore,           leftarrow ] }; // QWE/Cmk A
+    key <AC02> { [             r,             R,               equal,           downarrow ] }; // QWE S Cmk R
+    key <AC03> { [             s,             S,           braceleft,          rightarrow ] }; // QWE D Cmk S
+    key <AC04> { [             t,             T,           parenleft,           trademark ] }; // QWE F Cmk T
+    key <AC05> { [             g,             G,         bracketleft,          registered ] }; // QWE G Cmk D
+    key <AC06> { [             m,             M,        bracketright,          rightarrow ] }; // QWE/Cmk H
+    key <AC07> { [             n,             N,          parenright,                   1 ] }; // QWE J Cmk N
+    key <AC08> { [             e,             E,          braceright,                   2 ] }; // QWE K Cmk E
+    key <AC09> { [             i,             I,                plus,                   3 ] }; // QWE L Cmk I
     key <AC10> { [             o,             O,               minus,         ordfeminine ] }; // QWE ; Cmk O
     //
     key <AB01> { [             z,             Z,           backslash,               U0292 ] }; // QWE/Cmk Z
-    key <AB02> { [             x,             X,         bracketleft,              dagger ] }; // QWE/Cmk X
-    key <AB03> { [             c,             C,        bracketright,           copyright ] }; // QWE/Cmk C
+    key <AB02> { [             x,             X,                  ae,                  AE ] }; // QWE/Cmk X
+    key <AB03> { [             c,             C,           copyright,                cent ] }; // QWE/Cmk C
     key <AB04> { [             d,             D,               slash,            division ] }; // QWE/Cmk V
     key <AB05> { [             v,             V,                 bar,  enfilledcircbullet ] }; // QWE/Cmk B
-    key <AB06> { [             k,             K,            asterisk,            Ccedilla ] }; // QWE N Cmk K
+    key <AB06> { [             k,             K,            ccedilla,            Ccedilla ] }; // QWE N Cmk K
     key <AB07> { [             h,             H,            question,                  mu ] }; // QWE/Cmk M
 
     //  Alphanumeric section (number/symbol keys)
     key <TLDE> { [         grave,       notsign,                 bar,          dead_grave ] }; // `~
-    key <AE01> { [             1,        exclam,       dead_belowdot,          exclamdown ] }; // 1
+    key <AE01> { [             1,        exclam,         onesuperior,          exclamdown ] }; // 1
     key <AE02> { [             2,      quotedbl,         twosuperior,    dead_doubleacute ] }; // 2
     key <AE03> { [             3,      sterling,       threesuperior,            sterling ] }; // 3
     key <AE04> { [             4,        dollar,            EuroSign,            currency ] }; // 4
     key <AE05> { [             5,       percent,            EuroSign,            sterling ] }; // 5
-    key <AE06> { [             6,   asciicircum,     dead_circumflex,          onequarter ] }; // 6
-    key <AE07> { [             7,     ampersand,                   7,             onehalf ] }; // 7
-    key <AE08> { [             8,      asterisk,                   8,       threequarters ] }; // 8
-    key <AE09> { [             9,     parenleft,                   9, leftsinglequotemark ] }; // 9
-    key <AE10> { [             0,    parenright,                   0,rightsinglequotemark ] }; // 0
+    key <AE06> { [             6,   asciicircum,          onequarter,     dead_circumflex ] }; // 6
+    key <AE07> { [             7,     ampersand,             onehalf,                   7 ] }; // 7
+    key <AE08> { [             8,      asterisk,       threequarters,                   8 ] }; // 8
+    key <AE09> { [             9,     parenleft, leftsinglequotemark,                   9 ] }; // 9
+    key <AE10> { [             0,    parenright,rightsinglequotemark,                   0 ] }; // 0
     key <AE11> { [         minus,    underscore,                 yen,           plusminus ] }; // -_
     key <AE12> { [         equal,          plus,            multiply,            division ] }; // =+
-    //  U2248 approx equal; U2030 per mille
+    //
     key <AD11> { [   bracketleft,     braceleft,       guillemotleft,           0x1002039 ] }; // [{
     key <AD12> { [  bracketright,    braceright,      guillemotright,           0x100203a ] }; // ]}
     //
     key <AC11> { [    apostrophe,            at,               equal,          dead_acute ] }; // '@
     key <BKSL> { [    numbersign,    asciitilde,    dead_doubleacute,          dead_breve ] }; // #~
     // U2032 prime
-    key <LSGT> { [     backslash,           bar,                 bar,           brokenbar ] }; // \|
-    key <AB08> { [         comma,          less,                   0,       lessthanequal ] }; // ,
-    key <AB09> { [        period,       greater,            ellipsis,    greaterthanequal ] }; // .
-    key <AB10> { [         slash,      question,         dead_stroke,        questiondown ] }; // /?
+    key <LSGT> { [     backslash,           bar,               grave,           brokenbar ] }; // \|
+    key <AB08> { [         comma,          less,                less,       lessthanequal ] }; // ,
+    key <AB09> { [        period,       greater,             greater,    greaterthanequal ] }; // .
+    key <AB10> { [         slash,      question,        questiondown,         dead_stroke ] }; // /?
     //
-    key <SPCE> { [         space,         space,        nobreakspace,        nobreakspace ] };
+    key <SPCE> { [         space,         space,               space,        nobreakspace ] };
 
     include "level3(rwin_switch)"
     #include "level3(ralt_switch)"
