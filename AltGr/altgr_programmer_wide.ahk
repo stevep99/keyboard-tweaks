@@ -1,6 +1,6 @@
 ﻿; AutoHotKey script for providing additional layer of characters useful to programmers (default is AltGr)
 ; for use in conjunction with a "wide" layout
-; http://www.keyboard-layout-editor.com/#/layouts/b8a1a2240bba6ba0f6e96b656e7f75e5
+; http://www.keyboard-layout-editor.com/#/layouts/b04b8c2dfbd6b883b3be1022d53ad99c
 ; The script defines F20 as the extra layer key, so you can apply to any key of your choice
 ; e.g. 
 ; #InputLevel 1
@@ -36,7 +36,13 @@ F20 & SC003::
     Send ²
 return
 
-F20 & SC004::Send ³
+F20 & SC004::
+  GetKeyState, sh, Shift
+  if sh = D
+    Gosub £
+  else
+    Send ³
+return
 
 F20 & SC005::
   GetKeyState, sh, Shift
@@ -57,41 +63,41 @@ return
 F20 & SC008::
   GetKeyState, sh, Shift
   if sh = D
-    Send ¼
+    Gosub DeadKeyCircumflex
   else
-     Gosub DeadKeyCircumflex
+    Send ¼
 return
 
 F20 & SC009::
   GetKeyState, sh, Shift
   if sh = D
-	Send ½
-  else
     Send 7
+  else
+    Send ½
 return
 
 F20 & SC00A::
   GetKeyState, sh, Shift
   if sh = D
-	Send ¾
-  else
     Send 8
+  else
+    Send ¾
 return
 
 F20 & SC00B::
   GetKeyState, sh, Shift
   if sh = D
-	Send ‘
-  else
     Send 9
+  else
+    Send ‘
 return
 
 F20 & SC00C::
   GetKeyState, sh, Shift
   if sh = D
-	Send ’
-  else
     Send 0
+  else
+    Send ’
 return
 
 F20 & SC00D::
@@ -113,43 +119,83 @@ return
 ; upper row
 
 F20 & SC010::
-  Send {!}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {¡}
+  else
+    Send {!}
 return
 
 F20 & SC011::
-  Send {{}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {↑}
+  else
+    Send {"}
 return
 
 F20 & SC012::
-  Send {}}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {…}
+  else
+    Send {£}
 return
 
 F20 & SC013::
-  Send {$}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {π}
+  else
+    Send {$}
 return
 
 F20 & SC014::
-  Send {`%}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {β}
+  else
+    Send {`%}
 return
 
 F20 & SC016::
-  Send {^}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {Ʃ}
+  else
+    Send {^}
 return
 
 F20 & SC017::
-  Send {4}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {4}
+  else
+    Send {&}
 return
 
 F20 & SC018::
-  Send {5}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {5}
+  else
+    Send {*}
 return
 
 F20 & SC019::
-  Send {6}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {6}
+  else
+    Send {“}
 return
 
 F20 & SC01A::
-  Send {+}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {”}
+  else
+    Send {”}
 return
 
 F20 & SC01B:: 
@@ -157,115 +203,173 @@ F20 & SC01B::
 return
 
 F20 & SC015::
-  Send {«}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {‹}
+  else
+    Send {«}
 return
 
 ; middle row
 
 F20 & SC01E::
-  Send {_}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {←}
+  else
+    Send {_}
 return
 
 F20 & SC01F::
   GetKeyState, sh, Shift
   if sh = D
-    Send {®}
+    Send {↓}
+  else
+    Send {=}
+return
+
+F20 & SC020::
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {→}
+  else
+    Send {{}
+return
+
+F20 & SC021::
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {™}
   else
     Send {(}
 return
 
-F20 & SC020::
-  Send {)}
-return
-
-F20 & SC021::
-  Send {"}
-return
-
 F20 & SC022::
-  Send {£}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {®}
+  else
+    Send {[}
 return
 
 F20 & SC024::
-  Send {&}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {µ}
+  else
+    Send {[}
 return
 
 F20 & SC025::
-  Send {1}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {1}
+  else
+    Send {)}
 return
 
 F20 & SC026::
-  Send {2}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {2}
+  else
+    Send {}}
 return
 
 F20 & SC027::
-  Send {3}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {3}
+  else
+    Send {+}
 return
 
 F20 & SC028::
-  Send {-}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {°}
+  else
+    Send {-}
 return
 
 F20 & SC02B::
   GetKeyState, sh, Shift
   if sh = D
-    ; Gosub DeadKeyUmlaut
-    Gosub DeadKeyAccent
+    Gosub DeadKeyUmlaut
   else
-    ; Gosub DeadKeyAccent
-	Send {=}
+    Gosub DeadKeyAccent
 return
 
 F20 & SC023::
-  Send {»}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {›}
+  else
+    Send {»}
 return
 
 ; lower row
 
 F20 & SC056::
-  Send {\}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {ʒ}
+  else
+    Send {\}
 return
 
 F20 & SC02C::
   GetKeyState, sh, Shift
   if sh = D
-    Send {¢}
+    Send {Æ}
   else
-    Send {[}
+    Send {æ}
 return
 
 F20 & SC02D::
   GetKeyState, sh, Shift
   if sh = D
-    Send {©}
+    Send {¢}
   else
-    Send {]}
+    Send {©}
 return
 
 F20 & SC02E::
   GetKeyState, sh, Shift
   if sh = D
-    Send {?}
+    Send {÷}
   else
     Send {/}
 return
 
 F20 & SC02F::
-  Send {|}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {•}
+  else
+    Send {|}
 return
 
 F20 & SC030::
-  Send {¿}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {¦}
+  else
+    Send {`}
 return
 
 F20 & SC032::
-  Send {*}
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {Ç}
+  else
+    Send {ç}
 return
 
 F20 & SC033::
   GetKeyState, sh, Shift
   if sh = D
-    Send {µ}
+    Send {0}
   else
     Send {?}
 return
@@ -273,19 +377,27 @@ return
 F20 & SC034::
   GetKeyState, sh, Shift
   if sh = D
-    Send {·}
+    Send {≤}
   else
-    Send {0}
+    Send {<}
 return
 
 F20 & SC035::
   GetKeyState, sh, Shift
   if sh = D
-    Send {…}
+    Send {≥}
   else
-    Send {.}
+    Send {>}
 return
 
+F20 & SC031::
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {ª}
+  else
+    Send {¿}
+return
+    
 F20 & SC039::Send {Space}
 
 DeadKeyCircumflex:

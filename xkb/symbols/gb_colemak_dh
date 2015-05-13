@@ -19,11 +19,11 @@ xkb_symbols "stevep" {
     key <AC03> { [             s,             S,           braceleft,          rightarrow ] }; // QWE D Cmk S
     key <AC04> { [             t,             T,           parenleft,           trademark ] }; // QWE F Cmk T
     key <AC05> { [             g,             G,         bracketleft,          registered ] }; // QWE G Cmk D
-    key <AC06> { [             m,             M,        bracketright,          rightarrow ] }; // QWE/Cmk H
+    key <AC06> { [             m,             M,        bracketright,                  mu ] }; // QWE/Cmk H
     key <AC07> { [             n,             N,          parenright,                   1 ] }; // QWE J Cmk N
     key <AC08> { [             e,             E,          braceright,                   2 ] }; // QWE K Cmk E
     key <AC09> { [             i,             I,                plus,                   3 ] }; // QWE L Cmk I
-    key <AC10> { [             o,             O,               minus,         ordfeminine ] }; // QWE ; Cmk O
+    key <AC10> { [             o,             O,               minus,              degree ] }; // QWE ; Cmk O
     //
     key <AB01> { [             z,             Z,           backslash,               U0292 ] }; // QWE/Cmk Z
     key <AB02> { [             x,             X,                  ae,                  AE ] }; // QWE/Cmk X
@@ -31,7 +31,7 @@ xkb_symbols "stevep" {
     key <AB04> { [             d,             D,               slash,            division ] }; // QWE/Cmk V
     key <AB05> { [             v,             V,                 bar,  enfilledcircbullet ] }; // QWE/Cmk B
     key <AB06> { [             k,             K,            ccedilla,            Ccedilla ] }; // QWE N Cmk K
-    key <AB07> { [             h,             H,            question,                  mu ] }; // QWE/Cmk M
+    key <AB07> { [             h,             H,            question,                   0 ] }; // QWE/Cmk M
 
     //  Alphanumeric section (number/symbol keys)
     key <TLDE> { [         grave,       notsign,                 bar,          dead_grave ] }; // `~
@@ -57,7 +57,7 @@ xkb_symbols "stevep" {
     key <LSGT> { [     backslash,           bar,               grave,           brokenbar ] }; // \|
     key <AB08> { [         comma,          less,                less,       lessthanequal ] }; // ,
     key <AB09> { [        period,       greater,             greater,    greaterthanequal ] }; // .
-    key <AB10> { [         slash,      question,        questiondown,         dead_stroke ] }; // /?
+    key <AB10> { [         slash,      question,        questiondown,         ordfeminine ] }; // /?
     //
     key <SPCE> { [         space,         space,               space,        nobreakspace ] };
 
