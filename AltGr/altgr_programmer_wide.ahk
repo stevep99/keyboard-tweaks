@@ -39,7 +39,7 @@ return
 F20 & SC004::
   GetKeyState, sh, Shift
   if sh = D
-    Gosub £
+    Send £
   else
     Send ³
 return
