@@ -20,7 +20,7 @@ To try out these layouts, a Windows installer is available in the zip package. A
 - AltGr Progammer extension - making available commonly needed programmer keys such as brackets and symbols available in convenient locations.
 - AltGr International extension - making a variety of accented characters, currency, mathematical and other symbols all available via the AltGr key.
 
-[CapsLock Extend scripts](CapsLayer/ "CapsLock Extend scripts]")
+[CapsLock Extend scripts](ExtendLayer/ "CapsLock Extend scripts]")
 - Re-use CapsLock for something much more useful. This script provides a navigation layer via holding CapsLock and pressing other keys. Includes arrow keys, home, end, page up/down and more. The actual CapsLock function is still available via AltGr+CapsLock.
 
 [Misc scripts](Misc/ "Misc scripts]")
