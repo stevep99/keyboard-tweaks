@@ -14,16 +14,16 @@ xkb_symbols "stevep" {
     key <AD09> { [             y,             Y, leftdoublequotemark,                   6 ] }; // QWE O Cmk Y
     key <AD10> { [     semicolon,         colon,rightdoublequotemark,                sdot ] }; // QWE P Cmk ;:
     //  U2039/203A single guillemets; U0283/01A9 esh/ESH
-    key <AC01> { [             a,             A,          underscore,           leftarrow ] }; // QWE/Cmk A
-    key <AC02> { [             r,             R,               equal,           downarrow ] }; // QWE S Cmk R
+    key <AC01> { [             a,             A,               minus,           leftarrow ] }; // QWE/Cmk A
+    key <AC02> { [             r,             R,                plus,           downarrow ] }; // QWE S Cmk R
     key <AC03> { [             s,             S,           braceleft,          rightarrow ] }; // QWE D Cmk S
     key <AC04> { [             t,             T,           parenleft,           trademark ] }; // QWE F Cmk T
     key <AC05> { [             g,             G,         bracketleft,          registered ] }; // QWE G Cmk D
     key <AC06> { [             m,             M,        bracketright,                  mu ] }; // QWE/Cmk H
     key <AC07> { [             n,             N,          parenright,                   1 ] }; // QWE J Cmk N
     key <AC08> { [             e,             E,          braceright,                   2 ] }; // QWE K Cmk E
-    key <AC09> { [             i,             I,                plus,                   3 ] }; // QWE L Cmk I
-    key <AC10> { [             o,             O,               minus,              degree ] }; // QWE ; Cmk O
+    key <AC09> { [             i,             I,               equal,                   3 ] }; // QWE L Cmk I
+    key <AC10> { [             o,             O,          underscore,              degree ] }; // QWE ; Cmk O
     //
     key <AB01> { [             z,             Z,           backslash,               U0292 ] }; // QWE/Cmk Z
     key <AB02> { [             x,             X,                  ae,                  AE ] }; // QWE/Cmk X
@@ -61,8 +61,8 @@ xkb_symbols "stevep" {
     //
     key <SPCE> { [         space,         space,               space,        nobreakspace ] };
 
-    include "level3(rwin_switch)"
-    #include "level3(ralt_switch)"
+    //include "level3(rwin_switch)"
+    include "level3(ralt_switch)"
 
     name[Group1]= "English (UK Colemak-DH, stevep)";
 

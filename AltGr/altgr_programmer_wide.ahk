@@ -217,7 +217,7 @@ F20 & SC01E::
   if sh = D
     Send {←}
   else
-    Send {_}
+    Send {-}
 return
 
 F20 & SC01F::
@@ -225,7 +225,7 @@ F20 & SC01F::
   if sh = D
     Send {↓}
   else
-    Send {=}
+    Send {+}
 return
 
 F20 & SC020::
@@ -281,7 +281,7 @@ F20 & SC027::
   if sh = D
     Send {3}
   else
-    Send {+}
+    Send {=}
 return
 
 F20 & SC028::
@@ -289,7 +289,7 @@ F20 & SC028::
   if sh = D
     Send {°}
   else
-    Send {-}
+    Send {_}
 return
 
 F20 & SC02B::
