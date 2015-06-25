@@ -1,7 +1,7 @@
 
 ; AutoHotKey script for defining an Extend layer (default is CapsLock)
 ; Hold Extend and press other keys to provide navigation and other fuctionality
-; http://www.keyboard-layout-editor.com/#/layouts/768b9d970a55906aa4362eb96ac3ae1e
+; http://www.keyboard-layout-editor.com/#/layouts/1bf35b5a9fa1d7924977c5a3250165f8
 ; The script defines F22 as Extend, so you can apply to any key of your choice
 ; e.g. 
 ; #InputLevel 1
@@ -40,9 +40,7 @@ Return
 
 ; digit row
 
-F22 & SC029::
-  Send {Esc}
-return
+F22 & SC001::
 
 F22 & SC002::
   Send {Blind}{F1}
@@ -95,19 +93,19 @@ return
 ; top row
 
 F22 & SC010::
-  Send {Browser_Back}
+  Send {Esc}
 return
 
 F22 & SC011::
-  Send {WheelUp}
+  Send {Browser_Back}
 return
 
 F22 & SC012::
-  Send {Browser_Forward}
+  Send {CtrlDown}{f}{CtrlUp}
 return
 
 F22 & SC013::
-  Send {Blind}{PrintScreen}
+  Send {Browser_Forward}
 return
 
 F22 & SC014::
@@ -149,7 +147,7 @@ F22 & SC01E Up::
 return
 
 F22 & SC01F::
-  Send {WheelDown}
+  Send {Tab}
 return
 
 F22 & SC020::
@@ -211,7 +209,7 @@ F22 & SC02D::
 return
 
 F22 & SC02E::
-  Send {CtrlDown}{d}{CtrlUp}
+  Send {CtrlDown}{v}{CtrlUp}
 return
 
 F22 & SC02F::
