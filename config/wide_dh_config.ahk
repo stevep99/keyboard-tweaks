@@ -17,8 +17,12 @@ CapsLock::F22
 #Include ..\AltGr\altgr_programmer_wide.ahk
 
 #InputLevel 1
-RWin::F20
+RAlt::F20
 #InputLevel 0
+
+; sticky shift
+
+#Include ..\Misc\sticky_shift.ahk
 
 ; set right-alt to be shift
 
