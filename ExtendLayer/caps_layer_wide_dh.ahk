@@ -109,6 +109,11 @@ F22 & SC013::
 return
 
 F22 & SC014::
+	if cp = D
+	  SetCapsLockState, AlwaysOff
+	else
+      SetCapsLockState, AlwaysOn
+return
 
 F22 & SC015::
 
@@ -147,7 +152,7 @@ F22 & SC01E Up::
 return
 
 F22 & SC01F::
-  Send {Tab}
+  Send {Blind}{Tab}
 return
 
 F22 & SC020::
