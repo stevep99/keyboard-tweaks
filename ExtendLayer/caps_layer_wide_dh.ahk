@@ -109,10 +109,10 @@ F22 & SC013::
 return
 
 F22 & SC014::
-	if cp = D
-	  SetCapsLockState, AlwaysOff
-	else
-      SetCapsLockState, AlwaysOn
+  if cp = D
+    SetCapsLockState, AlwaysOff
+  else
+    SetCapsLockState, AlwaysOn
 return
 
 F22 & SC015::
@@ -144,11 +144,7 @@ return
 ; middle row
 
 F22 & SC01E::
-  Send {Blind}{AltDown}
-return
-
-F22 & SC01E Up::
-  Send {AltUp}
+  Send {CtrlDown}{a}{CtrlUp}
 return
 
 F22 & SC01F::

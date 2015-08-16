@@ -222,7 +222,7 @@ xkb_symbols "lv5" {
                    NoAction()           , NoAction()           ]
                };  // Cmk Y
     key <AD10> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Caps_Lock            , Caps_Lock             , // Del
+                   Caps_Lock            , Caps_Lock             , // Caps_Lock
                    KP_Add               , KP_Add               ], // KP_+
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
                    SetMods(mods=Lock)   , SetMods(mods=Lock)    , // Lock mod for <CAPS>
@@ -251,10 +251,10 @@ xkb_symbols "lv5" {
                };  // \ |
 
     key <AC01> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Alt_L                , Alt_L                 , // Alt
+                   SelectAll            , SelectAll             , // SelectAll
                    Left                 , KP_Left              ], //  ←
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   SetMods(mods=Alt)    , SetMods(mods=Alt)     , // Alt mod for <LALT>
+                   Redirect(key=<AC01>,mods=Control,clearmods=LevelFive), Redirect(key=<AC01>,mods=Shift+Control,clearmods=LevelFive), // Ctrl+A
                    NoAction()           , NoAction()           ]
                };  // Cmk A
     key <AC02> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
