@@ -1,6 +1,6 @@
 ﻿; AutoHotKey script for providing additional layer of characters useful to programmers (default is AltGr)
 ; for use in conjunction with a "wide" layout
-; http://www.keyboard-layout-editor.com/#/layouts/b04b8c2dfbd6b883b3be1022d53ad99c
+; http://www.keyboard-layout-editor.com/#/gists/a3998ebf4b61f5727d33
 ; The script defines F20 as the extra layer key, so you can apply to any key of your choice
 ; e.g. 
 ; #InputLevel 1
@@ -71,7 +71,7 @@ return
 F20 & SC009::
   GetKeyState, sh, Shift
   if sh = D
-    Send 7
+    Send ⅓
   else
     Send ½
 return
@@ -79,7 +79,7 @@ return
 F20 & SC00A::
   GetKeyState, sh, Shift
   if sh = D
-    Send 8
+    Send ⅔
   else
     Send ¾
 return
@@ -87,7 +87,7 @@ return
 F20 & SC00B::
   GetKeyState, sh, Shift
   if sh = D
-    Send 9
+    Send ≤
   else
     Send ‘
 return
@@ -95,7 +95,7 @@ return
 F20 & SC00C::
   GetKeyState, sh, Shift
   if sh = D
-    Send 0
+    Send ≥
   else
     Send ’
 return
@@ -169,7 +169,7 @@ return
 F20 & SC017::
   GetKeyState, sh, Shift
   if sh = D
-    Send {4}
+    Send {7}
   else
     Send {&}
 return
@@ -177,7 +177,7 @@ return
 F20 & SC018::
   GetKeyState, sh, Shift
   if sh = D
-    Send {5}
+    Send {8}
   else
     Send {*}
 return
@@ -185,7 +185,7 @@ return
 F20 & SC019::
   GetKeyState, sh, Shift
   if sh = D
-    Send {6}
+    Send {9}
   else
     Send {“}
 return
@@ -263,7 +263,7 @@ return
 F20 & SC025::
   GetKeyState, sh, Shift
   if sh = D
-    Send {1}
+    Send {4}
   else
     Send {)}
 return
@@ -271,7 +271,7 @@ return
 F20 & SC026::
   GetKeyState, sh, Shift
   if sh = D
-    Send {2}
+    Send {5}
   else
     Send {}}
 return
@@ -279,7 +279,7 @@ return
 F20 & SC027::
   GetKeyState, sh, Shift
   if sh = D
-    Send {3}
+    Send {6}
   else
     Send {=}
 return
@@ -287,7 +287,7 @@ return
 F20 & SC028::
   GetKeyState, sh, Shift
   if sh = D
-    Send {°}
+    Send {0}
   else
     Send {_}
 return
@@ -361,15 +361,15 @@ return
 F20 & SC032::
   GetKeyState, sh, Shift
   if sh = D
-    Send {Ç}
+    Send {0}
   else
-    Send {ç}
+    Send {°}
 return
 
 F20 & SC033::
   GetKeyState, sh, Shift
   if sh = D
-    Send {0}
+    Send {1}
   else
     Send {?}
 return
@@ -377,7 +377,7 @@ return
 F20 & SC034::
   GetKeyState, sh, Shift
   if sh = D
-    Send {≤}
+    Send {2}
   else
     Send {<}
 return
@@ -385,7 +385,7 @@ return
 F20 & SC035::
   GetKeyState, sh, Shift
   if sh = D
-    Send {≥}
+    Send {3}
   else
     Send {>}
 return

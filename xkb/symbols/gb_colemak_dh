@@ -9,9 +9,9 @@ xkb_symbols "stevep" {
     key <AD04> { [             p,             P,              dollar,            Greek_pi ] }; // QWE R Cmk P
     key <AD05> { [             b,             B,             percent,          Greek_beta ] }; // QWE T Cmk G
     key <AD06> { [             j,             J,         asciicircum,               U01A9 ] }; // QWE Y Cmk J
-    key <AD07> { [             l,             L,           ampersand,                   4 ] }; // QWE U Cmk L
-    key <AD08> { [             u,             U,            asterisk,                   5 ] }; // QWE I Cmk U
-    key <AD09> { [             y,             Y, leftdoublequotemark,                   6 ] }; // QWE O Cmk Y
+    key <AD07> { [             l,             L,           ampersand,                   7 ] }; // QWE U Cmk L
+    key <AD08> { [             u,             U,            asterisk,                   8 ] }; // QWE I Cmk U
+    key <AD09> { [             y,             Y, leftdoublequotemark,                   9 ] }; // QWE O Cmk Y
     key <AD10> { [     semicolon,         colon,rightdoublequotemark,                sdot ] }; // QWE P Cmk ;:
     //  U2039/203A single guillemets; U0283/01A9 esh/ESH
     key <AC01> { [             a,             A,               minus,           leftarrow ] }; // QWE/Cmk A
@@ -20,18 +20,21 @@ xkb_symbols "stevep" {
     key <AC04> { [             t,             T,           parenleft,           trademark ] }; // QWE F Cmk T
     key <AC05> { [             g,             G,         bracketleft,          registered ] }; // QWE G Cmk D
     key <AC06> { [             m,             M,        bracketright,                  mu ] }; // QWE/Cmk H
-    key <AC07> { [             n,             N,          parenright,                   1 ] }; // QWE J Cmk N
-    key <AC08> { [             e,             E,          braceright,                   2 ] }; // QWE K Cmk E
-    key <AC09> { [             i,             I,               equal,                   3 ] }; // QWE L Cmk I
-    key <AC10> { [             o,             O,          underscore,              degree ] }; // QWE ; Cmk O
+    key <AC07> { [             n,             N,          parenright,                   4 ] }; // QWE J Cmk N
+    key <AC08> { [             e,             E,          braceright,                   5 ] }; // QWE K Cmk E
+    key <AC09> { [             i,             I,               equal,                   6 ] }; // QWE L Cmk I
+    key <AC10> { [             o,             O,          underscore,                   0 ] }; // QWE ; Cmk O
     //
     key <AB01> { [             z,             Z,           backslash,               U0292 ] }; // QWE/Cmk Z
     key <AB02> { [             x,             X,                  ae,                  AE ] }; // QWE/Cmk X
     key <AB03> { [             c,             C,           copyright,                cent ] }; // QWE/Cmk C
     key <AB04> { [             d,             D,               slash,            division ] }; // QWE/Cmk V
     key <AB05> { [             v,             V,                 bar,  enfilledcircbullet ] }; // QWE/Cmk B
-    key <AB06> { [             k,             K,            ccedilla,            Ccedilla ] }; // QWE N Cmk K
-    key <AB07> { [             h,             H,            question,                   0 ] }; // QWE/Cmk M
+    key <AB06> { [             k,             K,              degree,                   0 ] }; // QWE N Cmk K
+    key <AB07> { [             h,             H,            question,                   1 ] }; // QWE/Cmk M
+    key <AB08> { [         comma,          less,                less,                   2 ] }; // ,
+    key <AB09> { [        period,       greater,             greater,                   3 ] }; // .
+    key <AB10> { [         slash,      question,        questiondown,         ordfeminine ] }; // /?
 
     //  Alphanumeric section (number/symbol keys)
     key <TLDE> { [         grave,       notsign,                 bar,          dead_grave ] }; // `~
@@ -41,10 +44,10 @@ xkb_symbols "stevep" {
     key <AE04> { [             4,        dollar,            EuroSign,            currency ] }; // 4
     key <AE05> { [             5,       percent,            EuroSign,            sterling ] }; // 5
     key <AE06> { [             6,   asciicircum,          onequarter,     dead_circumflex ] }; // 6
-    key <AE07> { [             7,     ampersand,             onehalf,                   7 ] }; // 7
-    key <AE08> { [             8,      asterisk,       threequarters,                   8 ] }; // 8
-    key <AE09> { [             9,     parenleft, leftsinglequotemark,                   9 ] }; // 9
-    key <AE10> { [             0,    parenright,rightsinglequotemark,                   0 ] }; // 0
+    key <AE07> { [             7,     ampersand,             onehalf,            onethird ] }; // 7
+    key <AE08> { [             8,      asterisk,       threequarters,           twothirds ] }; // 8
+    key <AE09> { [             9,     parenleft, leftsinglequotemark,       lessthanequal ] }; // 9
+    key <AE10> { [             0,    parenright,rightsinglequotemark,    greaterthanequal ] }; // 0
     key <AE11> { [         minus,    underscore,                 yen,           plusminus ] }; // -_
     key <AE12> { [         equal,          plus,            multiply,            division ] }; // =+
     //
@@ -55,9 +58,6 @@ xkb_symbols "stevep" {
     key <BKSL> { [    numbersign,    asciitilde,    dead_doubleacute,          dead_breve ] }; // #~
     // U2032 prime
     key <LSGT> { [     backslash,           bar,               grave,           brokenbar ] }; // \|
-    key <AB08> { [         comma,          less,                less,       lessthanequal ] }; // ,
-    key <AB09> { [        period,       greater,             greater,    greaterthanequal ] }; // .
-    key <AB10> { [         slash,      question,        questiondown,         ordfeminine ] }; // /?
     //
     key <SPCE> { [         space,         space,               space,        nobreakspace ] };
 
