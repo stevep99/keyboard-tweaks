@@ -355,7 +355,7 @@ F20 & SC030::
   if sh = D
     Send {¦}
   else
-    Send {`}
+    Send {``}
 return
 
 F20 & SC032::

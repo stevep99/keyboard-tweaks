@@ -1,5 +1,5 @@
 ﻿; AutoHotKey script for providing additional layer of characters useful to programmers (default is AltGr)
-; http://www.keyboard-layout-editor.com/#/gists/fd5249ac67e9a713ead1
+; http://www.keyboard-layout-editor.com/#/layouts/257e5f9ffdd0cc281b5a6c74a23fbdba
 ; The script defines F20 as the extra layer key, so you can apply to any key of your choice
 ; e.g. 
 ; #InputLevel 1
@@ -312,20 +312,12 @@ return
 F20 & SC056::
   GetKeyState, sh, Shift
   if sh = D
-    Send {¦}
-  else
-    Send {``}
-return
-
-F20 & SC02C::
-  GetKeyState, sh, Shift
-  if sh = D
     Send {ʒ}
   else
     Send {\}
 return
 
-F20 & SC02D::
+F20 & SC02C::
   GetKeyState, sh, Shift
   if sh = D
     Send {Æ}
@@ -333,7 +325,7 @@ F20 & SC02D::
     Send {æ}
 return
 
-F20 & SC02E::
+F20 & SC02D::
   GetKeyState, sh, Shift
   if sh = D
     Send {¢}
@@ -341,7 +333,7 @@ F20 & SC02E::
     Send {©}
 return
 
-F20 & SC02F::
+F20 & SC02E::
   GetKeyState, sh, Shift
   if sh = D
     Send {÷}
@@ -349,12 +341,20 @@ F20 & SC02F::
     Send {/}
 return
 
-F20 & SC030::
+F20 & SC02F::
   GetKeyState, sh, Shift
   if sh = D
     Send {•}
   else
     Send {|}
+return
+
+F20 & SC030::
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {¦}
+  else
+    Send {``}
 return
 
 F20 & SC031::
