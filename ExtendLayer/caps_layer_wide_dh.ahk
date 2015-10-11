@@ -1,7 +1,7 @@
 
 ; AutoHotKey script for defining an Extend layer (default is CapsLock)
 ; Hold Extend and press other keys to provide navigation and other fuctionality
-; http://www.keyboard-layout-editor.com/#/layouts/1bf35b5a9fa1d7924977c5a3250165f8
+; http://www.keyboard-layout-editor.com/#/gists/0906003d2ed2e5011779
 ; The script defines F22 as Extend, so you can apply to any key of your choice
 ; e.g. 
 ; #InputLevel 1
@@ -41,6 +41,7 @@ Return
 ; digit row
 
 F22 & SC001::
+return
 
 F22 & SC002::
   Send {Blind}{F1}
@@ -109,13 +110,11 @@ F22 & SC013::
 return
 
 F22 & SC014::
-  if cp = D
-    SetCapsLockState, AlwaysOff
-  else
-    SetCapsLockState, AlwaysOn
+  mouseclick, left
 return
 
 F22 & SC015::
+return
 
 F22 & SC016::
   Send {Blind}{PgUp}
@@ -147,6 +146,10 @@ F22 & SC01E::
   Send {CtrlDown}{a}{CtrlUp}
 return
 
+F22 & SC01E Up::
+  Send {AltUp}
+return
+
 F22 & SC01F::
   Send {Blind}{Tab}
 return
@@ -168,8 +171,11 @@ F22 & SC021 Up::
 return
 
 F22 & SC022::
+  mouseclick, right
+return
 
 F22 & SC023::
+return
 
 F22 & SC024::
   Send {Blind}{PgDn}
@@ -222,6 +228,7 @@ F22 & SC030::
 return
 
 F22 & SC031::
+return
 
 F22 & SC032::
   Send {Blind}{PgDn}
@@ -232,8 +239,15 @@ F22 & SC033::
 return
 
 F22 & SC034::
+  GetKeyState, cp, CapsLock, T
+  if cp = D
+    SetCapsLockState, AlwaysOff
+  else
+    SetCapsLockState, AlwaysOn
+return
 
 F22 & SC035::
+return
 
 F22 & SC039::
   Send {Return}
@@ -252,4 +266,3 @@ RAlt::
     SetCapsLockState, AlwaysOff
   } 
 Return
-
