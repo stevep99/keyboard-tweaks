@@ -83,24 +83,21 @@ xkb_symbols "lv5" {
                    Redirect(key=<DELE>) , Redirect(key=<DELE>) ]  // <DELE>
                };  // ` ~
     key <AE01> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Pointer_Button1      , Pointer_Button1       , // LBt(††)
-                   Pointer_Button1      , Pointer_Button1      ], // LBt
+                   F1      , F1     , exclam           , exclam             ], // !
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   PtrBtn(button=1)     , PtrBtn(button=1)      , // PtrLBt
+                   Redirect(key=<FK01>,clearmods=LevelFive), Redirect(key=<FK01>,clearmods=LevelFive),
                    NoAction()           , NoAction()           ]
                };  // 1
     key <AE02> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Pointer_Button2      , Pointer_Button2       , // MBt(††)
-                   Pointer_Button2      , Pointer_Button2      ], // MBt
+                   F2      , F2     , at               , at                 ], // @
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   PtrBtn(button=2)     , PtrBtn(button=2)      , // PtrMBt
+                   Redirect(key=<FK02>,clearmods=LevelFive), Redirect(key=<FK02>,clearmods=LevelFive),
                    NoAction()           , NoAction()           ]
                };  // 2
     key <AE03> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Pointer_Button3      , Pointer_Button3       , // RBt(††)
-                   Pointer_Button3      , Pointer_Button3      ], // RBt
+                   F3      , F3     , numbersign       , numbersign         ],  // #
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   PtrBtn(button=3)     , PtrBtn(button=3)      , // PtrRBt
+                   Redirect(key=<FK03>,clearmods=LevelFive), Redirect(key=<FK03>,clearmods=LevelFive),
                    NoAction()           , NoAction()           ]
                };  // 3
     key <AE04> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
@@ -187,12 +184,12 @@ xkb_symbols "lv5" {
                    NoAction()           , NoAction()           ]
                };  // Cmk P
     key <AD05> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Pointer_Up           , Pointer_Up            , // PtrUp(††)
-                   Escape               , Escape               ], // Esc
+                   Pointer_Button1      , Pointer_Button1       , // LBt(††)
+                   Pointer_Button1      , Pointer_Button1      ], // LBt
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   MovePtr(x=+0,y=-8)   , MovePtr(x=+0,y=-8)    , // PtrUp(††)
-                   Redirect(key=<ESC>)  , Redirect(key=<ESC>)  ]  // <ESC>
-               };  // Cmk G
+                   PtrBtn(button=1)     , PtrBtn(button=1)      , // PtrLBt
+                   NoAction()           , NoAction()           ]
+               };  // Cmk G -> B
     key <AD06> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Page_Up              , Page_Up               , // PgUp
                    Page_Up              , KP_Prior             ], // PgUp
@@ -279,12 +276,12 @@ xkb_symbols "lv5" {
                    NoAction()           , NoAction()           ]
                };  // Cmk T
     key <AC05> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Pointer_Down         , Pointer_Down          , // PtrDn(††)
-                   KP_Begin             , KP_Begin             ], // KP_Begin?!?
+                   Pointer_Button3      , Pointer_Button3       , // RBt(††)
+                   Pointer_Button3      , Pointer_Button3      ], // RBt
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   MovePtr(x=+0,y=+8)   , MovePtr(x=+0,y=+8)    , // PtrDn(††)
+                   PtrBtn(button=3)     , PtrBtn(button=3)      , // PtrRBt
                    NoAction()           , NoAction()           ]
-               };  // Cmk D
+               };  // Cmk D -> G
     key <AC06> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Page_Down            , Page_Down             , // PgDn
                    Page_Down            , KP_Next              ], // PgDn
@@ -389,17 +386,17 @@ xkb_symbols "lv5" {
                    NoAction()           , NoAction()           ]
                };  // M -> H
     key <AB08> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Pointer_Left         , Pointer_Left          , // PtrLe(††)
-                   comma                , semicolon            ], //  , ;
+                   Caps_Lock            , Caps_Lock             , // CapsLock
+                   Caps_Lock            , Caps_Lock            ], // CapsLock
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   MovePtr(x=-8,y=+0)   , MovePtr(x=-8,y=+0)    , // PtrLe(††)
+                   SetMods(mods=Lock)   , SetMods(mods=Lock)    , // Lock mod for <CAPS>
                    NoAction()           , NoAction()           ]
                };  // , <
     key <AB09> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Pointer_Right        , Pointer_Right         , // PtrRi(††)
-                   KP_Decimal           , colon                ], // KP_. :
+                   Pointer_Button2      , Pointer_Button2       , // MBt(††)
+                   Pointer_Button2      , Pointer_Button2      ], // MBt
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   MovePtr(x=+8,y=+0)   , MovePtr(x=+8,y=+0)    , // PtrRi(††)
+                   PtrBtn(button=2)     , PtrBtn(button=2)      , // PtrMBt
                    NoAction()           , NoAction()           ]
                };  // . >
     key <AB10> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
