@@ -6,7 +6,6 @@ xkb_symbols "lv5" {
     key.type[group1]="EIGHT_LEVEL_SEMIALPHABETIC"; // Lock affects lv1/5 but not lv3/7 - a bit inflexible but OK I guess
 
 // TODO: If I set lv5-6 of Esc to Caps_Lock, lv1-4 are CapsLock PLUS Esc! Try a LockMods action?
-//    key <ESC>  { [ Escape , Escape , Escape , Escape  , Caps_Lock , Caps_Lock ] };
     key <SCLK> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Caps_Lock            , Caps_Lock             , // CapsLock
                    Caps_Lock            , Caps_Lock            ], // CapsLock
@@ -199,21 +198,21 @@ xkb_symbols "lv5" {
                };  // Cmk J
     key <AD07> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Home                 , Home                  , // Home
-                   KP_4                 , U21D0                ], // KP_4 ← ⇐
+                   KP_7                 , U21D0                ], // KP_4 ← ⇐
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
                    Redirect(key=<HOME>) , Redirect(key=<HOME>)  , // <HOME>
                    NoAction()           , NoAction()           ]
                };  // Cmk L
     key <AD08> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Up                   , Up                    , //  ↑
-                   KP_5                 , U21D4                ], // KP_5 ↔ ⇔
+                   KP_8                 , U21D4                ], // KP_5 ↔ ⇔
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
                    Redirect(key=<UP>)   , Redirect(key=<UP>)    , // <UP>
                    NoAction()           , NoAction()           ]
                };  // Cmk U
     key <AD09> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    End                  , End                   , // End
-                   KP_6                 , U21D2                ], // KP_6 → ⇒
+                   KP_9                 , U21D2                ], // KP_6 → ⇒
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
                    Redirect(key=<END>)  , Redirect(key=<END>)   , // <END>
                    NoAction()           , NoAction()           ]
@@ -222,7 +221,7 @@ xkb_symbols "lv5" {
                    Caps_Lock            , Caps_Lock             , // Caps_Lock
                    KP_Add               , KP_Add               ], // KP_+
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   SetMods(mods=Lock)   , SetMods(mods=Lock)    , // Lock mod for <CAPS>
+                   LockMods(modifiers=Lock), LockMods(modifiers=Lock), // Lock mod for <CAPS>
                    NoAction()           , NoAction()           ]
                };  // ; :
     key <AD11> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
@@ -291,21 +290,21 @@ xkb_symbols "lv5" {
                };  // Cmk H -> M
     key <AC07> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Left                 , Left                  , //  ←
-                   KP_1                 , U21D9                ], // KP_1 ↙ ⇙
+                   KP_4                 , U21D9                ], // KP_4 ↙ ⇙
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
                    Redirect(key=<LEFT>) , Redirect(key=<LEFT>)  , // <LEFT>
                    NoAction()           , NoAction()           ]
                };  // Cmk N
     key <AC08> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Down                 , Down                  , //  ↓
-                   KP_2                 , U21D3                ], // KP_2 ↓ ⇓
+                   KP_5                 , U21D3                ], // KP_5 ↓ ⇓
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
                    Redirect(key=<DOWN>) , Redirect(key=<DOWN>)  , // <DOWN>
                    NoAction()           , NoAction()           ]
                };  // Cmk E
     key <AC09> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Right                , Right                 , //  →
-                   KP_3                 , U21D8                ], // KP_3 ↘ ⇘
+                   KP_6                 , U21D8                ], // KP_6 ↘ ⇘
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
                    Redirect(key=<RGHT>) , Redirect(key=<RGHT>)  , // <RGHT>
                    NoAction()           , NoAction()           ]
@@ -373,28 +372,28 @@ xkb_symbols "lv5" {
                };  // B -> V
     key <AB06> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    NoSymbol             , NoSymbol              , // PgDn
-                   Page_Down            , KP_Next              ], // PgDn
+                   KP_0                 , KP_Next              ], // KP_0
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
                    NoAction()           , NoAction()            , //
                    Redirect(key=<PGDN>) , NoAction()           ]
                };  // Cmk K
     key <AB07> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Backspace            , Backspace             , // RBt(††)
-                   KP_0                 , U21D5                ], // KP_0 ↕ ⇕
+                   KP_1                 , U21D5                ], // KP_1 ↕ ⇕
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
                    Redirect(key=<BKSP>) , Redirect(key=<BKSP>)  , // <BKSP>
                    NoAction()           , NoAction()           ]
                };  // M -> H
     key <AB08> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
-                   Caps_Lock            , Caps_Lock             , // CapsLock
-                   Caps_Lock            , Caps_Lock            ], // CapsLock
+                   NoSymbol             , NoSymbol              , // 
+                   KP_2                 , NoSymbol             ], // KP_1
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
-                   SetMods(mods=Lock)   , SetMods(mods=Lock)    , // Lock mod for <CAPS>
+                   NoAction()           , NoAction()            , // Lock mod for <CAPS>
                    NoAction()           , NoAction()           ]
                };  // , <
     key <AB09> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Pointer_Button2      , Pointer_Button2       , // MBt(††)
-                   Pointer_Button2      , Pointer_Button2      ], // MBt
+                   KP_3                 , NoSymbol             ], // KP_3
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
                    PtrBtn(button=2)     , PtrBtn(button=2)      , // PtrMBt
                    NoAction()           , NoAction()           ]
