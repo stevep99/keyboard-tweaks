@@ -12,18 +12,18 @@ xkb_symbols "stevep" {
     key <AD07> { [             l,             L,           ampersand,                   7 ] }; // QWE U Cmk L
     key <AD08> { [             u,             U,            asterisk,                   8 ] }; // QWE I Cmk U
     key <AD09> { [             y,             Y, leftdoublequotemark,                   9 ] }; // QWE O Cmk Y
-    key <AD10> { [     semicolon,         colon,rightdoublequotemark,                sdot ] }; // QWE P Cmk ;:
+    key <AD10> { [     semicolon,         colon,rightdoublequotemark,            asterisk ] }; // QWE P Cmk ;:
     //  U2039/203A single guillemets; U0283/01A9 esh/ESH
     key <AC01> { [             a,             A,               minus,           leftarrow ] }; // QWE/Cmk A
     key <AC02> { [             r,             R,                plus,           downarrow ] }; // QWE S Cmk R
     key <AC03> { [             s,             S,           braceleft,          rightarrow ] }; // QWE D Cmk S
     key <AC04> { [             t,             T,           parenleft,           trademark ] }; // QWE F Cmk T
     key <AC05> { [             g,             G,         bracketleft,          registered ] }; // QWE G Cmk D
-    key <AC06> { [             m,             M,        bracketright,                  mu ] }; // QWE/Cmk H
+    key <AC06> { [             m,             M,        bracketright,                plus ] }; // QWE/Cmk H
     key <AC07> { [             n,             N,          parenright,                   4 ] }; // QWE J Cmk N
     key <AC08> { [             e,             E,          braceright,                   5 ] }; // QWE K Cmk E
     key <AC09> { [             i,             I,               equal,                   6 ] }; // QWE L Cmk I
-    key <AC10> { [             o,             O,          underscore,                   0 ] }; // QWE ; Cmk O
+    key <AC10> { [             o,             O,          underscore,               minus ] }; // QWE ; Cmk O
     //
     key <AB01> { [             z,             Z,           backslash,               U0292 ] }; // QWE/Cmk Z
     key <AB02> { [             x,             X,                  ae,                  AE ] }; // QWE/Cmk X
@@ -34,7 +34,7 @@ xkb_symbols "stevep" {
     key <AB07> { [             h,             H,            question,                   1 ] }; // QWE/Cmk M
     key <AB08> { [         comma,          less,                less,                   2 ] }; // ,
     key <AB09> { [        period,       greater,             greater,                   3 ] }; // .
-    key <AB10> { [         slash,      question,        questiondown,         ordfeminine ] }; // /?
+    key <AB10> { [         slash,      question,        questiondown,               slash ] }; // /?
 
     //  Alphanumeric section (number/symbol keys)
     key <TLDE> { [         grave,       notsign,                 bar,          dead_grave ] }; // `~

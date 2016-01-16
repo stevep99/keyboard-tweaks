@@ -219,7 +219,7 @@ xkb_symbols "lv5" {
                };  // Cmk Y
     key <AD10> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Caps_Lock            , Caps_Lock             , // Caps_Lock
-                   KP_Add               , KP_Add               ], // KP_+
+                   KP_Multiply          , KP_Multiply          ], // KP_Multiply
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
                    LockMods(modifiers=Lock), LockMods(modifiers=Lock), // Lock mod for <CAPS>
                    NoAction()           , NoAction()           ]
@@ -283,10 +283,10 @@ xkb_symbols "lv5" {
                };  // Cmk D -> G
     key <AC06> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Page_Down            , Page_Down             , // PgDn
-                   Page_Down            , KP_Next              ], // PgDn
+                   KP_Add               , KP_Add               ], // KP_Add
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
                    Redirect(key=<PGDN>) , Redirect(key=<PGDN>)  , // <PGDN>
-                   Redirect(key=<PGDN>) , NoAction()           ]
+                   NoAction()           , NoAction()           ]
                };  // Cmk H -> M
     key <AC07> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Left                 , Left                  , //  ←
@@ -311,7 +311,7 @@ xkb_symbols "lv5" {
                };  // Cmk I
     key <AC10> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Delete               , Delete                , // Back
-                   Delete               , Delete               ], // Del
+                   KP_Subtract          , KP_Subtract          ], // KP_Subtract
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
                    Redirect(key=<DELE>) , Redirect(key=<DELE>)  , // <DELE>
                    NoAction()           , NoAction()           ]
@@ -375,7 +375,7 @@ xkb_symbols "lv5" {
                    KP_0                 , KP_Next              ], // KP_0
                  actions[Group1]=[NoAction(),NoAction(),NoAction(),NoAction(),
                    NoAction()           , NoAction()            , //
-                   Redirect(key=<PGDN>) , NoAction()           ]
+                   NoAction()           , NoAction()           ]
                };  // Cmk K
     key <AB07> { symbols[Group1]=[ NoSymbol , NoSymbol , NoSymbol , NoSymbol ,
                    Backspace            , Backspace             , // RBt(††)
