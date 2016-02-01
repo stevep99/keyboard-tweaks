@@ -9,8 +9,10 @@ F10::Suspend , Off
 #Include ..\ExtendLayer\caps_layer_wide_dh.ahk
 
 #InputLevel 1
-CapsLock::F22
+sc038::F22
 #InputLevel 0
+ 
+sc03a::lalt
 
 ; include AltGr layer
 

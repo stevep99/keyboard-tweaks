@@ -98,7 +98,8 @@ F22 & SC010::
 return
 
 F22 & SC011::
-  Send {Browser_Back}
+  mouseclick, x1
+  ;Send {Browser_Back}
 return
 
 F22 & SC012::
@@ -106,7 +107,8 @@ F22 & SC012::
 return
 
 F22 & SC013::
-  Send {Browser_Forward}
+  mouseclick, x2
+  ;Send {Browser_Forward}
 return
 
 F22 & SC014::
@@ -133,7 +135,11 @@ F22 & SC019::
 return
 
 F22 & SC01A::
-  Send {Blind}{End}{;}
+  GetKeyState, cp, CapsLock, T
+  if cp = D
+    SetCapsLockState, AlwaysOff
+  else
+    SetCapsLockState, AlwaysOn
 return
 
 F22 & SC01B::
@@ -239,11 +245,6 @@ F22 & SC033::
 return
 
 F22 & SC034::
-  GetKeyState, cp, CapsLock, T
-  if cp = D
-    SetCapsLockState, AlwaysOff
-  else
-    SetCapsLockState, AlwaysOn
 return
 
 F22 & SC035::
