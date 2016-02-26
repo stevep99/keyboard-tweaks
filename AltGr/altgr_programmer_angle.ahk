@@ -260,7 +260,7 @@ F20 & SC023::
   if sh = D
     Send {µ}
   else
-    Send {[}
+    Send {]}
 return
 
 F20 & SC024::
