@@ -6,7 +6,7 @@ F10::Suspend , Off
 
 ; include Extend layer
 
-#Include ..\ExtendLayer\caps_layer_wide_dh.ahk
+#Include ..\ExtendLayer\extend_layer_wide_dh.ahk
 
 #InputLevel 1
 sc038::F22     ; define Extend on left-alt
@@ -25,3 +25,4 @@ RAlt::F20    ; define right-alt on apps-key
 ; additional thumb key configuration
 
 AppsKey::RShift  ; define shift on apps-key
+sc029::BackSpace   ; define backspace on ` key

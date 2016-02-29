@@ -6,7 +6,7 @@ F10::Suspend , Off
 
 ; include Extend layer
 
-#Include ..\ExtendLayer\caps_layer_std.ahk
+#Include ..\ExtendLayer\extend_layer_std.ahk
 
 #InputLevel 1
 CapsLock::F22

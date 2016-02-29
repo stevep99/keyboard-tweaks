@@ -6,7 +6,7 @@ F10::Suspend , Off
 
 ; include Extend layer
 
-#Include ..\ExtendLayer\caps_layer_dh.ahk
+#Include ..\ExtendLayer\extend_layer_dh.ahk
 
 #InputLevel 1
 sc038::F22     ; define Extend on left-alt
@@ -22,15 +22,7 @@ sc03a::lalt    ; define left-alt on capslock
 RAlt::F20    ; define right-alt on apps-key
 #InputLevel 0
 
-; sticky shift
+; additional thumb key configuration
 
-; #Include ..\Misc\sticky_shift.ahk
-
-; launchers
-
-; #Include ..\Misc\launch.ahk
-
-; set right-alt to be shift
-
-;RAlt::RShift
-
+BackSpace::LShift  ; define shift on backspace
+sc029::BackSpace   ; define backspace on ` key
