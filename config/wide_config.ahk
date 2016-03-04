@@ -6,7 +6,7 @@ F10::Suspend , Off
 
 ; include Extend layer
 
-#Include ..\ExtendLayer\caps_layer_wide.ahk
+#Include ..\ExtendLayer\extend_layer_wide.ahk
 
 #InputLevel 1
 CapsLock::F22
@@ -19,8 +19,4 @@ CapsLock::F22
 #InputLevel 1
 RWin::F20
 #InputLevel 0
-
-; set right-alt to be shift
-
-;RAlt::RShift
 

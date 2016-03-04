@@ -1,7 +1,7 @@
-
+﻿
 ; AutoHotKey script for defining an Extend layer (default is CapsLock)
 ; Hold Extend and press other keys to provide navigation and other fuctionality
-; http://www.keyboard-layout-editor.com/#/gists/0906003d2ed2e5011779
+; http://www.keyboard-layout-editor.com/#/gists/13128ddf4f402e580a5a
 ; The script defines F22 as Extend, so you can apply to any key of your choice
 ; e.g. 
 ; #InputLevel 1
@@ -63,31 +63,31 @@ F22 & SC006::
   Send {Blind}{F5}
 return
 
-F22 & SC008::
+F22 & SC007::
   Send {Blind}{F6}
 return
 
-F22 & SC009::
+F22 & SC008::
   Send {Blind}{F7}
 return
 
-F22 & SC00A::
+F22 & SC009::
   Send {Blind}{F8}
 return
 
-F22 & SC00B::
+F22 & SC00A::
   Send {Blind}{F9}
 return
 
-F22 & SC00C::
+F22 & SC00B::
   Send {Blind}{F10}
 return
 
-F22 & SC00D::
+F22 & SC00C::
   Send {Blind}{F11}
 return
 
-F22 & SC007::
+F22 & SC00D::
   Send {Blind}{F12}
 return
 
@@ -98,7 +98,8 @@ F22 & SC010::
 return
 
 F22 & SC011::
-  Send {Browser_Back}
+  mouseclick, x1
+  ;Send {Browser_Back}
 return
 
 F22 & SC012::
@@ -106,7 +107,8 @@ F22 & SC012::
 return
 
 F22 & SC013::
-  Send {Browser_Forward}
+  mouseclick, x2
+  ;Send {Browser_Forward}
 return
 
 F22 & SC014::
@@ -114,30 +116,34 @@ F22 & SC014::
 return
 
 F22 & SC015::
-return
-
-F22 & SC016::
   Send {Blind}{PgUp}
 return
 
-F22 & SC017::
+F22 & SC016::
   Send {Blind}{Home}
 return
 
-F22 & SC018::
+F22 & SC017::
   Send {Blind}{Up}
 return
 
-F22 & SC019::
+F22 & SC018::
   Send {Blind}{End}
 return
 
+F22 & SC019::
+  GetKeyState, cp, CapsLock, T
+  if cp = D
+    SetCapsLockState, AlwaysOff
+  else
+    SetCapsLockState, AlwaysOn
+return
+
 F22 & SC01A::
-  Send {Blind}{End}{;}
+  Send {Insert}
 return
 
 F22 & SC01B::
-  Send {Insert}
 return
 
 ; middle row
@@ -175,29 +181,26 @@ F22 & SC022::
 return
 
 F22 & SC023::
-return
-
-F22 & SC024::
   Send {Blind}{PgDn}
 return
 
-F22 & SC025::
+F22 & SC024::
   Send {Blind}{Left}
 return
 
-F22 & SC026::
+F22 & SC025::
   Send {Blind}{Down}
 return
 
-F22 & SC027::
+F22 & SC026::
   Send {Blind}{Right}
 return
 
-F22 & SC028::
+F22 & SC027::
   Send {Blind}{Del}
 return
 
-F22 & SC02B::
+F22 & SC028::
   Send {Blind}{Del}
 return
 
@@ -228,22 +231,17 @@ F22 & SC030::
 return
 
 F22 & SC031::
-return
-
-F22 & SC032::
   Send {Blind}{PgDn}
 return
 
-F22 & SC033::
+F22 & SC032::
   Send {Blind}{Backspace}
 return
 
+F22 & SC033::
+return
+
 F22 & SC034::
-  GetKeyState, cp, CapsLock, T
-  if cp = D
-    SetCapsLockState, AlwaysOff
-  else
-    SetCapsLockState, AlwaysOn
 return
 
 F22 & SC035::

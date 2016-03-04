@@ -1,7 +1,7 @@
-﻿
+
 ; AutoHotKey script for defining an Extend layer (default is CapsLock)
 ; Hold Extend and press other keys to provide navigation and other fuctionality
-; http://www.keyboard-layout-editor.com/#/gists/13128ddf4f402e580a5a
+; http://www.keyboard-layout-editor.com/#/gists/5f31818f137440704db9
 ; The script defines F22 as Extend, so you can apply to any key of your choice
 ; e.g. 
 ; #InputLevel 1
@@ -98,7 +98,8 @@ F22 & SC010::
 return
 
 F22 & SC011::
-  Send {Browser_Back}
+  mouseclick, x1
+  ;Send {Browser_Back}
 return
 
 F22 & SC012::
@@ -106,7 +107,8 @@ F22 & SC012::
 return
 
 F22 & SC013::
-  Send {Browser_Forward}
+  mouseclick, x2
+  ;Send {Browser_Forward}
 return
 
 F22 & SC014::
@@ -130,7 +132,11 @@ F22 & SC018::
 return
 
 F22 & SC019::
-  Send {Blind}{End}{;}
+  GetKeyState, cp, CapsLock, T
+  if cp = D
+    SetCapsLockState, AlwaysOff
+  else
+    SetCapsLockState, AlwaysOn
 return
 
 F22 & SC01A::
@@ -201,19 +207,19 @@ return
 ; bottom row
 
 F22 & SC056::
-  Send {CtrlDown}{z}{CtrlUp}
+  Send {CtrlDown}{y}{CtrlUp}
 return
 
 F22 & SC02C::
-  Send {CtrlDown}{x}{CtrlUp}
+  Send {CtrlDown}{z}{CtrlUp}
 return
 
 F22 & SC02D::
-  Send {CtrlDown}{c}{CtrlUp}
+  Send {CtrlDown}{x}{CtrlUp}
 return
 
 F22 & SC02E::
-  Send {CtrlDown}{v}{CtrlUp}
+  Send {CtrlDown}{c}{CtrlUp}
 return
 
 F22 & SC02F::
@@ -233,11 +239,6 @@ F22 & SC032::
 return
 
 F22 & SC033::
-  GetKeyState, cp, CapsLock, T
-  if cp = D
-    SetCapsLockState, AlwaysOff
-  else
-    SetCapsLockState, AlwaysOn
 return
 
 F22 & SC034::
