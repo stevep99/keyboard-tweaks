@@ -152,10 +152,6 @@ F22 & SC01E::
   Send {CtrlDown}{a}{CtrlUp}
 return
 
-F22 & SC01E Up::
-  Send {AltUp}
-return
-
 F22 & SC01F::
   Send {Blind}{Tab}
 return
