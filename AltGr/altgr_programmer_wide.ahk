@@ -87,7 +87,7 @@ return
 F20 & SC00B::
   GetKeyState, sh, Shift
   if sh = D
-    Send ≤
+    Send “
   else
     Send ‘
 return
@@ -95,7 +95,7 @@ return
 F20 & SC00C::
   GetKeyState, sh, Shift
   if sh = D
-    Send ≥
+    Send ”
   else
     Send ’
 return
@@ -171,7 +171,7 @@ F20 & SC017::
   if sh = D
     Send {7}
   else
-    Send {&}
+    Send {7}
 return
 
 F20 & SC018::
@@ -179,7 +179,7 @@ F20 & SC018::
   if sh = D
     Send {8}
   else
-    Send {*}
+    Send {8}
 return
 
 F20 & SC019::
@@ -187,15 +187,15 @@ F20 & SC019::
   if sh = D
     Send {9}
   else
-    Send {“}
+    Send {9}
 return
 
 F20 & SC01A::
   GetKeyState, sh, Shift
   if sh = D
-    Send {”}
+    Send {*}
   else
-    Send {”}
+    Send {+}
 return
 
 F20 & SC01B:: 
@@ -217,7 +217,7 @@ F20 & SC01E::
   if sh = D
     Send {←}
   else
-    Send {-}
+    Send {_}
 return
 
 F20 & SC01F::
@@ -225,7 +225,7 @@ F20 & SC01F::
   if sh = D
     Send {↓}
   else
-    Send {+}
+    Send {=}
 return
 
 F20 & SC020::
@@ -257,7 +257,7 @@ F20 & SC024::
   if sh = D
     Send {µ}
   else
-    Send {]}
+    Send {+}
 return
 
 F20 & SC025::
@@ -265,15 +265,15 @@ F20 & SC025::
   if sh = D
     Send {4}
   else
-    Send {)}
+    Send {4}
 return
 
 F20 & SC026::
   GetKeyState, sh, Shift
   if sh = D
-    Send {5}
+    Send {•}
   else
-    Send {}}
+    Send {5}
 return
 
 F20 & SC027::
@@ -281,15 +281,15 @@ F20 & SC027::
   if sh = D
     Send {6}
   else
-    Send {=}
+    Send {6}
 return
 
 F20 & SC028::
   GetKeyState, sh, Shift
   if sh = D
-    Send {0}
-  else
     Send {_}
+  else
+    Send {-}
 return
 
 F20 & SC02B::
@@ -321,33 +321,33 @@ return
 F20 & SC02C::
   GetKeyState, sh, Shift
   if sh = D
-    Send {Æ}
-  else
-    Send {æ}
-return
-
-F20 & SC02D::
-  GetKeyState, sh, Shift
-  if sh = D
-    Send {¢}
-  else
-    Send {©}
-return
-
-F20 & SC02E::
-  GetKeyState, sh, Shift
-  if sh = D
     Send {÷}
   else
     Send {/}
 return
 
+F20 & SC02D::
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {©}
+  else
+    Send {}}
+return
+
+F20 & SC02E::
+  GetKeyState, sh, Shift
+  if sh = D
+    Send {¢}
+  else
+    Send {)}
+return
+
 F20 & SC02F::
   GetKeyState, sh, Shift
   if sh = D
-    Send {•}
-  else
     Send {|}
+  else
+    Send {]}
 return
 
 F20 & SC030::
@@ -361,43 +361,43 @@ return
 F20 & SC032::
   GetKeyState, sh, Shift
   if sh = D
-    Send {0}
-  else
     Send {°}
+  else
+    Send {0}
 return
 
 F20 & SC033::
   GetKeyState, sh, Shift
   if sh = D
-    Send {1}
-  else
     Send {?}
+  else
+    Send {1}
 return
 
 F20 & SC034::
   GetKeyState, sh, Shift
   if sh = D
-    Send {2}
+    Send {≤}
   else
-    Send {<}
+    Send {2}
 return
 
 F20 & SC035::
   GetKeyState, sh, Shift
   if sh = D
-    Send {3}
+    Send {≥}
   else
-    Send {>}
+    Send {3}
 return
 
 F20 & SC031::
   GetKeyState, sh, Shift
   if sh = D
-    Send {ª}
-  else
     Send {¿}
+  else
+    Send {/}
 return
-    
+
 F20 & SC039::Send {Space}
 
 DeadKeyCircumflex:
