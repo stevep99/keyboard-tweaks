@@ -162,7 +162,7 @@ F20 & SC015::
   if sh = D
     Send {Ʃ}
   else
-    Send {^}
+    Send {&}
 return
 
 F20 & SC016::
@@ -330,7 +330,7 @@ F20 & SC02D::
   if sh = D
     Send {÷}
   else
-    Send {/}
+    Send {^}
 return
 
 F20 & SC02E::
@@ -392,9 +392,9 @@ return
 F20 & SC035::
   GetKeyState, sh, Shift
   if sh = D
-    Send {¿}
-  else
     Send {/}
+  else
+    Send {¿}
 return
 
 F20 & SC039::Send {Space}
