@@ -2,8 +2,9 @@
 ; AutoHotKey script for defining an Extend layer (default is CapsLock)
 ; Hold Extend and press other keys to provide navigation and other fuctionality
 ; http://www.keyboard-layout-editor.com/#/gists/0906003d2ed2e5011779
+;
 ; The script defines F22 as Extend, so you can apply to any key of your choice
-; e.g. 
+; e.g. to use CapsLock, define:
 ; #InputLevel 1
 ; CapsLock::F22
 ; #InputLevel 0
@@ -116,6 +117,7 @@ F22 & SC014::
 return
 
 F22 & SC015::
+  Send {Blind}{PrintScreen}
 return
 
 F22 & SC016::
@@ -135,15 +137,7 @@ F22 & SC019::
 return
 
 F22 & SC01A::
-  GetKeyState, cp, CapsLock, T
-  if cp = D
-    SetCapsLockState, AlwaysOff
-  else
-    SetCapsLockState, AlwaysOn
-return
-
-F22 & SC01B::
-  Send {Insert}
+  Send {AppsKey}
 return
 
 ; middle row
@@ -177,6 +171,7 @@ F22 & SC022::
 return
 
 F22 & SC023::
+  Send {Insert}
 return
 
 F22 & SC024::
@@ -200,7 +195,11 @@ F22 & SC028::
 return
 
 F22 & SC02B::
-  Send {Blind}{Del}
+  GetKeyState, cp, CapsLock, T
+  if cp = D
+    SetCapsLockState, AlwaysOff
+  else
+    SetCapsLockState, AlwaysOn
 return
 
 ; bottom row
@@ -226,7 +225,7 @@ F22 & SC02F::
 return
 
 F22 & SC030::
-  Send {AppsKey}
+  mouseclick, middle
 return
 
 F22 & SC031::
