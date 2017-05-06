@@ -237,12 +237,15 @@ F22 & SC032::
 return
 
 F22 & SC033::
+  Send {Blind}{F13}
 return
 
 F22 & SC034::
+  Send {Blind}{F14}
 return
 
 F22 & SC035::
+  Send {LWin}
 return
 
 F22 & SC039::

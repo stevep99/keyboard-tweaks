@@ -4,15 +4,19 @@
 F9::Suspend , On
 F10::Suspend , Off
 
-; include Extend layer
+; main key mapping
+
+#Include ..\keymap\colemak.ahk
+
+; Extend layer
 
 #Include ..\ExtendLayer\extend_layer_std.ahk
 
 #InputLevel 1
-CapsLock::F22
+sc03a::F22     ; define Extend on CapsLock
 #InputLevel 0
 
-; include AltGr layer
+; AltGr layer
 
 #Include ..\AltGr\altgr_programmer_std.ahk
 

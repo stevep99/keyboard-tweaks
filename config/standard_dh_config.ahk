@@ -4,7 +4,11 @@
 F9::Suspend , On
 F10::Suspend , Off
 
-; include Extend layer
+; main key mapping
+
+#Include ..\keymap\mod_dh_iso.ahk
+
+; Extend layer
 
 #Include ..\ExtendLayer\extend_layer_dh.ahk
 
@@ -12,17 +16,17 @@ F10::Suspend , Off
 sc038::F22     ; define Extend on left-alt
 #InputLevel 0
  
-sc03a::lalt    ; define left-alt on capslock
-
-; include AltGr layer
+; AltGr layer
 
 #Include ..\AltGr\altgr_programmer_angle.ahk
 
 #InputLevel 1
-RAlt::F20    ; define right-alt on apps-key
+BackSpace::F20    ; define right-alt on backspace (for Ergo Pro)
+RAlt::RShift      ; define shift on right-alt
 #InputLevel 0
 
-; additional thumb key configuration
+; additional custom configuration
 
-BackSpace::LShift  ; define shift on backspace
-sc029::BackSpace   ; define backspace on ` key
+;sc03a::lalt    ; define left-alt on capslock
+sc15B::lalt    ; define left-alt on leftwin
+sc03a::lwin    ; define left-win on capslock

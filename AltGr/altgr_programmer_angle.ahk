@@ -162,7 +162,7 @@ F20 & SC015::
   if sh = D
     Send {Ʃ}
   else
-    Send {&}
+    Send {^}
 return
 
 F20 & SC016::
@@ -260,7 +260,7 @@ F20 & SC023::
   if sh = D
     Send {µ}
   else
-    Send {+}
+    Send {*}
 return
 
 F20 & SC024::
@@ -322,7 +322,7 @@ F20 & SC02C::
   if sh = D
     Send {÷}
   else
-    Send {^}
+    Send {&}
 return
 
 F20 & SC02D::
