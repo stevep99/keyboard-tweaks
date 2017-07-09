@@ -192,7 +192,7 @@ return
 F20 & SC019::
   GetKeyState, sh, Shift
   if sh = D
-    Send {*}
+    Send {±}
   else
     Send {+}
 return
@@ -314,15 +314,15 @@ F20 & SC056::
   if sh = D
     Send {ʒ}
   else
-    Send {\}
+    Send {&}
 return
 
 F20 & SC02C::
   GetKeyState, sh, Shift
   if sh = D
-    Send {÷}
+    Send {~}
   else
-    Send {&}
+    Send {#}
 return
 
 F20 & SC02D::
@@ -344,7 +344,7 @@ return
 F20 & SC02F::
   GetKeyState, sh, Shift
   if sh = D
-    Send {|}
+    Send {—}
   else
     Send {]}
 return
@@ -368,7 +368,7 @@ return
 F20 & SC032::
   GetKeyState, sh, Shift
   if sh = D
-    Send {?}
+    Send {≠}
   else
     Send {1}
 return
@@ -392,12 +392,12 @@ return
 F20 & SC035::
   GetKeyState, sh, Shift
   if sh = D
-    Send {/}
-  else
     Send {¿}
+  else
+    Send {/}
 return
 
-F20 & SC039::Send {Space}
+F20 & space::Send {Return}
 
 DeadKeyCircumflex:
 Input, TextEntry1, L1,{Esc}{Enter}{F1}{Down}{Up}
