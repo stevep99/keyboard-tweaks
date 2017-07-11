@@ -1,4 +1,4 @@
-; colemak mod-dh mapping for matrix boards
+; Colemak Mod-DH mapping for matrix boards
 
 ;SC010::q
 ;SC011::w
@@ -29,3 +29,8 @@ SC02f::d
 SC030::v
 SC031::k
 SC032::h
+
+; set Backspace to CapsLock key
+
+; sc03a::backspace
+

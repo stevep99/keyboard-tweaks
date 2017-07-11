@@ -1,4 +1,4 @@
-; colemak mod-dh mapping for ANSI boards
+; Colemak Mod-DH mapping for ANSI boards
 
 ;SC010::q
 ;SC011::w
@@ -29,3 +29,7 @@ SC02e::d
 SC030::z
 SC031::m
 SC032::h
+
+; set Backspace to CapsLock key
+
+; sc03a::backspace

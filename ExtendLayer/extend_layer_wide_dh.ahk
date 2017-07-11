@@ -12,33 +12,6 @@
 #Persistent
 SetCapsLockState, AlwaysOff
 
-*F22::
-  GetKeyState, sh, Shift
-  GetKeyState, ra, RAlt
-  GetKeyState, ct, Control
-  if ra = D
-  {
-    GetKeyState, cp, CapsLock, T
-	if cp = D
-	  SetCapsLockState, AlwaysOff
-	else
-      SetCapsLockState, AlwaysOn  
-  }
-  else if sh = D
-  {
-    GetKeyState, cp, CapsLock, T
-	if cp = D
-	  SetCapsLockState, AlwaysOff
-	else
-      SetCapsLockState, AlwaysOn  
-  }
-  else
-  {
-    ;Send {Backspace}
-    SetCapsLockState, AlwaysOff
-  }
-Return
-
 ; digit row
 
 F22 & SC001::
@@ -240,9 +213,11 @@ F22 & SC033::
 return
 
 F22 & SC034::
+  Send {Blind}{F13}
 return
 
 F22 & SC035::
+  Send {Blind}{F14}
 return
 
 F22 & SC039::

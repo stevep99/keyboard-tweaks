@@ -12,33 +12,6 @@
 #Persistent
 SetCapsLockState, AlwaysOff
 
-*F22::
-  GetKeyState, sh, Shift
-  GetKeyState, ra, RAlt
-  GetKeyState, ct, Control
-  if ra = D
-  {
-    GetKeyState, cp, CapsLock, T
-	if cp = D
-	  SetCapsLockState, AlwaysOff
-	else
-      SetCapsLockState, AlwaysOn  
-  }
-  else if sh = D
-  {
-    GetKeyState, cp, CapsLock, T
-	if cp = D
-	  SetCapsLockState, AlwaysOff
-	else
-      SetCapsLockState, AlwaysOn  
-  }
-  else
-  {
-    ;Send {Backspace}
-    SetCapsLockState, AlwaysOff
-  }
-Return
-
 ; digit row
 
 F22 & SC001::

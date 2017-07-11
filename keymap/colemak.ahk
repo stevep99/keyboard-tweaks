@@ -1,4 +1,4 @@
-; colemak mapping
+; Standard Colemak mapping
 
 ;SC010::q
 ;SC011::w

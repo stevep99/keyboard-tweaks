@@ -1,4 +1,17 @@
-; colemak wide mapping
+; Colemak wide mapping
+
+;SC002::1
+;SC003::2
+;SC004::3
+;SC005::4
+;SC006::5
+SC007::=
+SC008::6
+SC009::7
+SC00a::8
+SC00b::9
+SC00c::0
+SC00d::-
 
 ;SC010::q
 ;SC011::w
@@ -18,8 +31,8 @@ SC01F::r
 SC020::s
 SC021::t
 SC022::d
-SC024::h
 SC023::]
+SC024::h
 SC025::n
 SC026::e
 SC027::i

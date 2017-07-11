@@ -1,4 +1,4 @@
-; colemak mod-dh mapping for ISO boards
+; Colemak Mod-DH mapping for ISO boards
 
 ;SC010::q
 ;SC011::w
@@ -30,3 +30,7 @@ SC02e::d
 SC030::\
 SC031::m
 SC032::h
+
+; set Backspace to CapsLock key
+
+; sc03a::backspace
