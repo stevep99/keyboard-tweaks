@@ -113,6 +113,10 @@ F22 & SC01A::
   Send {AppsKey}
 return
 
+F22 & SC01B::
+  Send {Blind}{Del}
+return
+
 ; middle row
 
 F22 & SC01E::
@@ -164,10 +168,6 @@ F22 & SC027::
 return
 
 F22 & SC028::
-  Send {Blind}{Del}
-return
-
-F22 & SC02B::
   GetKeyState, cp, CapsLock, T
   if cp = D
     SetCapsLockState, AlwaysOff
