@@ -1,7 +1,7 @@
 AltGr AutoHotkey scripts
 =========================
 
-## AltGr Progammer extension 
+## AltGr Progammer extension
 
 Makes available commonly needed programmer characters such as brackets and symbols, available in convenient locations on the keyboard. Avoid awkward stretching for those common keys. Also adds a virtual numeric keybad to right hand. 
 
@@ -10,13 +10,17 @@ Makes available commonly needed programmer characters such as brackets and symbo
 - Numeric keypad allows quick entering of numbers without leaving the home position.
 - Also implements some of the AltGr International Extension (see below) so you can also type many extended and accented characters via dead keys (indicated with light blue background).
 
+Variations are available for layouts that implement the [Angle-Mod](http://colemakmods.github.io/ergonomic-mods/angle.html) and [Wide-Mod](http://colemakmods.github.io/ergonomic-mods/wide.html), examples are shown below. Note, for users of alternative layouts, these AHK files can be optionally used in conjuction with [AHK keymap scripts](../keymap/) or with [KLC layouts](../KLC/).
+
+
 ![altgr_programmer_std.png](altgr_programmer_std.png)
+<p align="center">AltGr mappings, UK keyboard shown. Should work fine on US and other layouts too.</p>
 
-<p align="center">UK keyboard shown. Should work fine on US and other layouts too.</p>
+![altgr_programmer_angle.png](altgr_programmer_angle.png)
+<p align="center">AltGr mappings with the Angle-Mod enabled.</p>
 
-There is also a Wide version of this layout suitable for use with the [KLC Wide Layouts](../KLC/)
-![altgr_programmer_wide.png](altgr_programmer_wide.png)
-<p align="center">Wide layout on a UK keyboard. Should work fine on US and other layouts too.</p>
+![altgr_programmer_wide_angle.png](altgr_programmer_wide_angle.png)
+<p align="center">AltGr mappings with both Angle and Wide Mods enabled.</p>
 
 ## AltGr International extension 
 

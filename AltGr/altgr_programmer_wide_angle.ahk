@@ -163,7 +163,7 @@ F20 & SC016::
   if sh = D
     Send {Ʃ}
   else
-    Send {^}
+    Send {=}
 return
 
 F20 & SC017::
@@ -225,7 +225,7 @@ F20 & SC01F::
   if sh = D
     Send {↓}
   else
-    Send {=}
+    Send {[}
 return
 
 F20 & SC020::
@@ -249,7 +249,7 @@ F20 & SC022::
   if sh = D
     Send {®}
   else
-    Send {[}
+    Send {^}
 return
 
 F20 & SC024::
@@ -315,7 +315,7 @@ F20 & SC056::
   if sh = D
     Send {ʒ}
   else
-    Send {&}
+    Send {#}
 return
 
 F20 & SC02C::
@@ -323,7 +323,7 @@ F20 & SC02C::
   if sh = D
     Send {~}
   else
-    Send {#}
+    Send {]}
 return
 
 F20 & SC02D::
@@ -347,7 +347,7 @@ F20 & SC02F::
   if sh = D
     Send {—}
   else
-    Send {]}
+    Send {&}
 return
 
 F20 & SC030::
