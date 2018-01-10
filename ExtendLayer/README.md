@@ -9,11 +9,14 @@ The key to act as the modifier is configurable. DreymaR's version uses CapsLock,
 - Also defines accessible additional shift and control within the layer to allow easy selection and editing of text.
 - Detects keyboard scancodes so as to work with any keyboard layout (let me know if this is not the case!). Tested with Qwerty and Colemak.
 
-**[Download](extend_layer_std.ahk) a version suitable for Colemak or Qwerty standard layouts:**
+**[Download](extend_layer_std.ahk) a configuration for Colemak or Qwerty standard layouts:**
 ![extend_layer_std.png](extend_layer_std.png)
 
-**[Download](extend_layer_wide.ahk) a Wide version suitable for use with the Colemak/Qwerty [Wide Layouts](../KLC/):**
+**[Download](extend_layer_wide.ahk) a configuration for the Colemak/Qwerty [Wide Layouts](../KLC/):**
 ![extend_layer_wide.png](extend_layer_wide.png)
 
-**[Download](extend_layer_wide_dh.ahk) a Wide version suitable for the [Colemak Mod-DH](http://colemakmods.github.io/mod-dh/) layout:**
+**[Download](extend_layer_dh.ahk) a configuration for the [Colemak Mod-DH](http://colemakmods.github.io/mod-dh/) layout:**
+![extend_layer_dh.png](extend_layer_dh.png)
+
+**[Download](extend_layer_wide_dh.ahk) a configuration for the [Colemak Mod-DH](http://colemakmods.github.io/mod-dh/) Wide layout:**
 ![extend_layer_wide_dh.png](extend_layer_wide_dh.png)
