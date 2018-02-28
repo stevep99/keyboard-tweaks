@@ -86,7 +86,7 @@ F22 & SC013::
 return
 
 F22 & SC014::
-  mouseclick, left
+  Send {Insert}
 return
 
 F22 & SC015::
@@ -144,7 +144,11 @@ F22 & SC021 Up::
 return
 
 F22 & SC022::
-  mouseclick, right
+  Send {Blind}{AltDown}
+return
+
+F22 & SC025 Up::
+  Send {AltUp}
 return
 
 F22 & SC023::
@@ -198,11 +202,10 @@ F22 & SC02F::
 return
 
 F22 & SC030::
-  mouseclick, middle
 return
 
 F22 & SC031::
-  Send {Blind}{PgDn}
+  mouseclick, left
 return
 
 F22 & SC032::
