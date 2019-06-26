@@ -147,7 +147,7 @@ F22 & SC022::
   Send {Blind}{AltDown}
 return
 
-F22 & SC025 Up::
+F22 & SC022 Up::
   Send {AltUp}
 return
 
