@@ -1,9 +1,9 @@
 Extend Layer AutoHotkey scripts
 ===============================
 
-This script provides a new navigation and editing layer on a chosen modifier key, similar to and inspired by [DreymaR's Extend Layer](http://forum.colemak.com/viewtopic.php?id=1438). This implementation is entirely in AutoHotkey.
+This script provides a new navigation and editing layer on a chosen modifier key called '[Extend](https://colemakmods.github.io/ergonomic-mods/extend.html)'. It is similar to and inspired by [DreymaR's Extend Layer](https://forum.colemak.com/topic/2014-extend-extra-extreme/), but this implementation is entirely in AutoHotkey.
 
-The key to act as the modifier is configurable. DreymaR's version uses CapsLock, but I have found LeftAlt is also an excellent choice. To configure, remap the chosen key to the virtual key "F22" and the new layer will become available on that key.
+The key to act as the modifier is configurable. DreymaR's version uses CapsLock, but I have found LeftAlt is also an excellent choice. The script uses the virtual key "F22" to represent the 'Extend' function. To configure, remap the chosen physical key to the virtual key "F22", and the new layer will become available by holding down that key.
 
 - Provides navigation features such as arrow keys, home, end, page up/down, backspace/delete without the need to move your hands away from the home position.
 - Also defines accessible additional shift and control within the layer to allow easy selection and editing of text.
