@@ -16,7 +16,7 @@ SC01F::r
 SC020::s
 SC021::t
 ;SC022::g
-SC023::k
+SC023::m
 SC024::n
 SC025::e
 SC026::i
@@ -28,7 +28,7 @@ SC02d::c
 SC02e::d
 ;SC02f::v
 SC030::\
-SC031::m
+SC031::k
 SC032::h
 
 ; set Backspace to CapsLock key
