@@ -1,13 +1,11 @@
-﻿
-; AutoHotKey script for defining an Extend layer (default is CapsLock)
+﻿; AutoHotKey script for defining an Extend layer (default is CapsLock)
 ; Hold Extend and press other keys to provide navigation and other fuctionality
-; http://www.keyboard-layout-editor.com/#/gists/d012934a2644b603a253
 ;
 ; The script defines F24 as Extend, so you can apply to any key of your choice
 ; e.g. to use CapsLock, define:
-; #InputLevel 1
-; CapsLock::F24
-; #InputLevel 0
+#InputLevel 1
+CapsLock::F24
+#InputLevel 0
 
 #Persistent
 SetCapsLockState, AlwaysOff
@@ -37,31 +35,31 @@ F24 & SC006::
   Send {Blind}{F5}
 return
 
-F24 & SC008::
+F24 & SC007::
   Send {Blind}{F6}
 return
 
-F24 & SC009::
+F24 & SC008::
   Send {Blind}{F7}
 return
 
-F24 & SC00A::
+F24 & SC009::
   Send {Blind}{F8}
 return
 
-F24 & SC00B::
+F24 & SC00A::
   Send {Blind}{F9}
 return
 
-F24 & SC00C::
+F24 & SC00B::
   Send {Blind}{F10}
 return
 
-F24 & SC00D::
+F24 & SC00C::
   Send {Blind}{F11}
 return
 
-F24 & SC007::
+F24 & SC00D::
   Send {Blind}{F12}
 return
 
@@ -90,7 +88,6 @@ F24 & SC014::
 return
 
 F24 & SC015::
-  Send {Blind}{PrintScreen}
 return
 
 F24 & SC016::
@@ -110,17 +107,29 @@ F24 & SC019::
 return
 
 F24 & SC01A::
-  Send {AppsKey}
+  GetKeyState, cp, CapsLock, T
+  if cp = D
+    SetCapsLockState, AlwaysOff
+  else
+    SetCapsLockState, AlwaysOn
 return
 
 ; middle row
 
 F24 & SC01E::
-  Send {CtrlDown}{a}{CtrlUp}
+  Send {Blind}{LAltDown}
+return
+
+F24 & SC01E Up::
+  Send {LAltUp}
 return
 
 F24 & SC01F::
-  Send {Blind}{Tab}
+  Send {Blind}{LWinDown}
+return
+
+F24 & SC01F Up::
+  Send {LWinUp}
 return
 
 F24 & SC020::
@@ -140,15 +149,14 @@ F24 & SC021 Up::
 return
 
 F24 & SC022::
-  Send {Blind}{AltDown}
+  Send {Blind}{RAltDown}
 return
 
 F24 & SC022 Up::
-  Send {AltUp}
+  Send {RAltUp}
 return
 
 F24 & SC023::
-  Send {Insert}
 return
 
 F24 & SC024::
@@ -169,14 +177,6 @@ return
 
 F24 & SC028::
   Send {Blind}{Del}
-return
-
-F24 & SC02B::
-  GetKeyState, cp, CapsLock, T
-  if cp = D
-    SetCapsLockState, AlwaysOff
-  else
-    SetCapsLockState, AlwaysOn
 return
 
 ; bottom row
@@ -205,10 +205,11 @@ F24 & SC030::
 return
 
 F24 & SC031::
+  Send {Return}
 return
 
 F24 & SC032::
-  mouseclick, left
+  Send {Blind}{PrintScreen}
 return
 
 F24 & SC033::
@@ -216,15 +217,11 @@ F24 & SC033::
 return
 
 F24 & SC034::
-  Send {Blind}{F13}
+  Send {Blind}{Tab}
 return
 
 F24 & SC035::
-  Send {Blind}{F14}
-return
-
-F24 & SC039::
-  Send {Return}
+  Send {AppsKey}
 return
 
 ; RAlt cancel caps / nav layer

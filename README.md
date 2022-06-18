@@ -28,3 +28,7 @@ To try out any of the scripts, install the excellent [AutoHotkey](http://ahkscri
 
 To try out these layouts, a Windows installer is available in the zip package. Alternatevely, if you have Microsoft Keyboard Layout Creator installed, you can load in the KLC source file and make custom changes.
 
+## See Also
+
+**[Seniply](https://stevep99.github.io/seniply/)** - A minimalist ergonomic keyboard layout using Extend and Symbols layers.
+

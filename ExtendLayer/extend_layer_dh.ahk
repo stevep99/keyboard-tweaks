@@ -1,13 +1,11 @@
-﻿
-; AutoHotKey script for defining an Extend layer (default is CapsLock)
+﻿; AutoHotKey script for defining an Extend layer (default is CapsLock)
 ; Hold Extend and press other keys to provide navigation and other fuctionality
-; http://www.keyboard-layout-editor.com/#/gists/13128ddf4f402e580a5a
 ;
 ; The script defines F24 as Extend, so you can apply to any key of your choice
 ; e.g. to use CapsLock, define:
-; #InputLevel 1
-; CapsLock::F24
-; #InputLevel 0
+#InputLevel 1
+CapsLock::F24
+#InputLevel 0
 
 #Persistent
 SetCapsLockState, AlwaysOff
@@ -106,24 +104,32 @@ F24 & SC018::
 return
 
 F24 & SC019::
-  Send {AppsKey}
+  GetKeyState, cp, CapsLock, T
+  if cp = D
+    SetCapsLockState, AlwaysOff
+  else
+    SetCapsLockState, AlwaysOn
 return
 
 F24 & SC01A::
-  Send {Blind}{PrintScreen}
-return
-
-F24 & SC01B::
 return
 
 ; middle row
 
 F24 & SC01E::
-  Send {CtrlDown}{a}{CtrlUp}
+  Send {Blind}{LAltDown}
+return
+
+F24 & SC01E Up::
+  Send {LAltUp}
 return
 
 F24 & SC01F::
-  Send {Blind}{Tab}
+  Send {Blind}{LWinDown}
+return
+
+F24 & SC01F Up::
+  Send {LWinUp}
 return
 
 F24 & SC020::
@@ -143,11 +149,11 @@ F24 & SC021 Up::
 return
 
 F24 & SC022::
-  Send {Blind}{AltDown}
+  Send {Blind}{RAltDown}
 return
 
 F24 & SC022 Up::
-  Send {AltUp}
+  Send {RAltUp}
 return
 
 F24 & SC023::
@@ -171,11 +177,6 @@ F24 & SC027::
 return
 
 F24 & SC028::
-  GetKeyState, cp, CapsLock, T
-  if cp = D
-    SetCapsLockState, AlwaysOff
-  else
-    SetCapsLockState, AlwaysOn
 return
 
 ; bottom row
@@ -193,7 +194,7 @@ F24 & SC02D::
 return
 
 F24 & SC02E::
-  Send {CtrlDown}{v}{CtrlUp}
+  Send {CtrlDown}{c}{CtrlUp}
 return
 
 F24 & SC02F::
@@ -204,7 +205,7 @@ F24 & SC030::
 return
 
 F24 & SC031::
-  mouseclick, left
+  Send {Blind}{PrintScreen}
 return
 
 F24 & SC032::
@@ -212,18 +213,14 @@ F24 & SC032::
 return
 
 F24 & SC033::
-  Send {Blind}{F13}
+  Send {Blind}{Tab}
 return
 
 F24 & SC034::
-  Send {Blind}{F14}
+  Send {AppsKey}
 return
 
 F24 & SC035::
-  Send {LWin}
-return
-
-F24 & SC039::
   Send {Return}
 return
 
