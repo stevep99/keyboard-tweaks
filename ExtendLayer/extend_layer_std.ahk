@@ -3,9 +3,9 @@
 ;
 ; The script defines F24 as Extend, so you can apply to any key of your choice
 ; e.g. to use CapsLock, define:
-#InputLevel 1
-CapsLock::F24
-#InputLevel 0
+;#InputLevel 1
+;CapsLock::F24
+;#InputLevel 0
 
 #Persistent
 SetCapsLockState, AlwaysOff

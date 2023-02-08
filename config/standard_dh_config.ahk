@@ -13,7 +13,7 @@ F10::Suspend , Off
 #Include ..\ExtendLayer\extend_layer_dh.ahk
 
 #InputLevel 1
-sc038::F22     ; define Extend on left-alt
+sc038::F24     ; define Extend on left-alt
 #InputLevel 0
  
 ; AltGr layer
@@ -21,12 +21,15 @@ sc038::F22     ; define Extend on left-alt
 #Include ..\AltGr\altgr_programmer_angle.ahk
 
 #InputLevel 1
-BackSpace::F20    ; define right-alt on backspace (for Ergo Pro)
-RAlt::RShift      ; define shift on right-alt
+; activate the AltGr symbols layer
+RAlt::F20
+; activate the symbols layer on Shift, and RAlt on Backspace (custom config for Ergo Pro)
+;BackSpace::F20
+;RAlt::RShift
 #InputLevel 0
 
 ; additional custom configuration
 
 ;sc03a::lalt    ; define left-alt on capslock
-sc15B::lalt    ; define left-alt on leftwin
-sc03a::lwin    ; define left-win on capslock
+;sc15B::lalt    ; define left-alt on leftwin
+;sc03a::lwin    ; define left-win on capslock

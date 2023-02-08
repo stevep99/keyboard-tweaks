@@ -2,9 +2,9 @@
 ; http://www.keyboard-layout-editor.com/#/gists/fd5249ac67e9a713ead1
 ; The script defines F20 as the extra layer key, so you can apply to any key of your choice
 ; e.g. 
-; #InputLevel 1
-; RAlt::F20
-; #InputLevel 0
+;#InputLevel 1
+;RAlt::F20
+;#InputLevel 0
 
 
 F20 & F1::KeyHistory

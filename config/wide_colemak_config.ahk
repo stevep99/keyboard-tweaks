@@ -13,7 +13,7 @@ F10::Suspend , Off
 #Include ..\ExtendLayer\extend_layer_wide.ahk
 
 #InputLevel 1
-sc03a::F22     ; define Extend on CapsLock
+sc03a::F24     ; define Extend on CapsLock
 #InputLevel 0
 
 ; AltGr layer

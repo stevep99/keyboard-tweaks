@@ -17,7 +17,7 @@ This project contains [AutoHotkey](http://ahkscript.org/ "AutoHotkey") scripts a
 [Misc scripts](Misc/ "Misc scripts]")
 - Other miscellaneous AutoHotkey scripts: sticky shift, numeric keypad layer.
 
-To try out any of the scripts, install the excellent [AutoHotkey](http://ahkscript.org/ "AutoHotkey") and then run the script. Or choose "Edit This Script" from the AutoHotkey menu and paste in the script you want to try.
+To try out any of the scripts, install the excellent [AutoHotkey](http://ahkscript.org/ "AutoHotkey") and then run the script. Or choose "Edit This Script" from the AutoHotkey menu and paste in the script you want to try. AutoHotKey version 1.1 is required.
 
 ## KLC Wide Layouts
 
